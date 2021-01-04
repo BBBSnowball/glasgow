@@ -1,0 +1,164 @@
+Build a RevC-light variant:
+
+- GD32VF103CBT6 instead of Cypress -> USB FS instead of 2.0
+  - connect ADC to all I/Os
+  - use 2x DAC to replace I2C DACs
+  - https://www.tme.eu/de/en/details/gd32vf103cbt6/microcontrollers-others/gigadevice/
+- ICE40UP5K-SG48I instead of HX8K -> like RevB, no BGA
+  - use LED drivers? one RGB LED may be enough
+- still use individual buffers (like RevC)
+- less I/Os: 8-10 instead of 16 in 1-2 banks
+- smaller form factor: like USB stick / USB RS232 adapters / Sipeed USB-JTAG
+  - as small as possible
+  - 10-pin "Wannenstecker" on small edge
+  - 10-pin 1.27 mm connector
+  - 2-pin SYNC
+  - using both sides is ok but all small parts should be on top for easy reflow soldering
+    (QFNs, resistor arrays, TVS arrays)
+- GND and VCC
+  - TODO: in which position?
+    - Sipeed is similar to USB blaster but without VCC
+    - USB Blaster: GND on 2 and 10, VCC-IN on 4
+    - AVR ISP 10pin: VCC on 2, GND on 4,5,6,8,10
+    - AVR ISP 6pin: VCC on 2, GND on 6 -> shifted down by one: VCC on 4, GND on 8
+    - ARM JTAG 10pin: similar to flipped AVR ISP 10pin, i.e. VCC on 1, GND on 3,5,9
+    - PMOD: GND on 9 and 10, VCC on 11 and 12
+    - Original has separate Vsense and VIO.
+  - option to switch them off and use that pin as an input?
+    -> jumper or FET or enable-pin of LDO
+- simple modes without bitstream?
+  - GD32 could do RS232 and probably JTAG without any fancy software on the host.
+- host protocol
+  - option 1: like the Cypress
+  - option 2: CDC/ACM
+  - option 3: ethernet with RNDIS and CDC-ECM
+    - Main page is loaded from external source. GD32 provides DHCP, DNS/avahi, index.html, REST interface.
+    - Try to enable local caching via manifest/web worker.
+    - Upload simple bitstream, e.g. for USB-UART.
+    - How much can we do in the web browser? -> run Yosys? remote Yosys?
+      http://yowasp.org/
+    - Segger has software for USB ethernet (expensive and not open, of course), which takes ~30 kB
+      of RAM so USB ethernet is probably not a realistic option for an MCU with only 32 kB of RAM.
+    - Implement gdb protocol for RISC-V - I don't think, this will work in 32 kB of RAM.
+- replace INA233?
+  - not available on lcsc or digikey
+  - expensive
+  - alternative: resistor divider before and after shunt
+  - very imprecise:
+    v1 = 5
+    v2 = 5 - x*0.1
+    2% in each resistor divider is 0.1V -> error of 200%
+  - ZXCT1107 sieht gut aus und gibt's bei lcsc und TME.
+    https://datasheet.lcsc.com/szlcsc/Diodes-Incorporated-ZXCT1107SA-7_C82766.pdf
+  - INA180 ist günstiger, aber wir wollen eher A1 und den gibt's nicht bei lcsc.
+    https://lcsc.com/product-detail/PMIC-Current-Power-Monitors-Regulators_Texas-Instruments-Texas-Instruments-INA180A3IDBVR_C122882.html
+  - INA199A1 wäre bidirektional.
+    - Der braucht dann aber eine Referenzspannung und wenn ich mir die mit einem Spannungsteiler baue,
+      dann passt evtl der Nullpunkt nicht gut. Das könnte verwirrend sein.
+  - Also wohl ein INA180A3 mit 100 V/V als Gain.
+    3V/100/0.5A = 60 mOhm
+  - lcsc hat 50mOhm und 47mOhm mit 1% und 0603.
+  - Ich sollte dann wohl möglichst den mit 400ppm/K nehmen, weil 1200ppm/K sind noch mal nen Prozent mehr bei 10 K.
+    https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-PT0603FR-7W0R05L_C784595.html
+  - Oh, A2 gibts doch.
+- missing features:
+  - reset button (at least the "emergency off" feature that disables the LDOs)
+  - less channels
+  - only one VIO bank
+  - much slower
+  - smaller FPGA
+  - no EEPROMs
+  - no ATECC508A
+  - INA233 replaced by lower-quality solution
+  - weak pulldown on all pins if ADC feature is placed
+- power sequencing
+  - I use the FPGA of RevB so we *do* need that.
+  - LM3880 is quite expensive.
+  - option 1: use it anyway
+  - option 2: use two regulators for 3V3 and enable it with GD32
+  - option 3: LDO for 1V2 -> PT1 -> EN of LDO for 3V3
+    - datasheet says >=1V on EN pin
+    - We should probably add a discharge resistor.
+    - This is still likely to fail on brown-out. The GD32 can reset the FPGA in that case but this
+      isn't guaranteed to work.
+
+- pinout for FPGA:
+  - available: 39 GPIO
+  - 2x I2C
+  - 5x JTAG
+  - 4x SPI
+  - 8x DATA I/O
+  - 8x DATA direction
+  - 3x LED
+  - sum: 30
+
+  - We could connect the pullup/down to the FPGA but they should run at VIO.
+  - This would require one I2C chip per bank, though.
+
+- pinout of GD32V:
+  - 2x DAC
+  - 8x ADC
+  - 3x USB
+  - 4-5x JTAG for GD32
+  - 4-5x JTAG for FPGA
+  - >4x interface to FPGA: normal SPI because GD32 doesn't support QSPI
+  - 2x I2C
+  - 1x LED
+  - 2x ENA for VIO LDO
+  - 1x ENA for 3V3 for FPGA
+  - sum: 32
+
+  QFN48 - not complete for pins that have a fixed function already.
+
+  TODO: 2x ENA, 1x ENA
+
+  | pin | name          | ADC | DAC | SPI  | UART   |     | TIMER | special  | used as?   |
+  |-----+---------------+-----+-----+------+--------+-----+-------+----------+------------|
+  |   1 | Vbat          |     |     |      |        |     |       | supply   | S          |
+  |   2 | PC13          |     |     |      |        |     |       | RTC      | !! free !! |
+  |   3 | OSC32IN/PC14  |     |     |      |        |     |       | RTC      | !! free !! |
+  |   4 | OSC32OUT/PC15 |     |     |      |        |     |       | RTC      | !! free !! |
+  |   5 | OSCIN         |     |     |      |        |     |       |          | OSC        |
+  |   6 | OSCOUT        |     |     |      |        |     |       |          | OSC        |
+  |   7 | NRST          |     |     |      |        |     |       | reset    | S          |
+  |   8 | VSSA          |     |     |      |        |     |       | supply   | S          |
+  |   9 | VDDA          |     |     |      |        |     |       | supply   | S          |
+  |  10 | PA0           |  01 |     |      |        |     |       |          | ADC        |
+  |  11 | PA1           |  01 |     |      |        |     |       |          | ADC        |
+  |  12 | PA2           |  01 |     |      | TX     |     |       |          | ADC, TX    |
+  |  13 | PA3           |  01 |     |      | RX     |     |       |          | ADC, RX    |
+  |  14 | PA4           |  01 |   0 | NSS  | CK     |     |       |          | DAC!       |
+  |  15 | PA5           |  01 |   1 | SCK  |        |     |       |          | DAC!       |
+  |  16 | PA6           |  01 |     | MISO |        |     |       |          | ADC        |
+  |  17 | PA7           |  01 |     | MOSI |        |     |       |          | ADC        |
+  |  18 | PB0           |  01 |     |      |        |     |       |          | ADC        |
+  |  19 | PB1           |  01 |     |      |        |     |       |          | ADC        |
+  |  20 | PB2           |     |     |      |        |     |       | BOOT1    | B (free)   |
+  |  21 | PB10          |     |     |      | TX     | SCL |     1 |          | I2C        |
+  |  22 | PB11          |     |     |      | RX     | SDA |     1 |          | I2C        |
+  |  23 | VSS           |     |     |      |        |     |       | supply   | S          |
+  |  24 | VDD           |     |     |      |        |     |       | supply   | S          |
+  |  25 | PB12          |     |     | NSS  | CK     |     |       |          | SPI        |
+  |  26 | PB13          |     |     | SCK  |        |     |     0 |          | SPI        |
+  |  27 | PB14          |     |     | MISO |        |     |     0 |          | SPI        |
+  |  28 | PB15          |     |     | MOSI |        |     |     0 |          | SPI        |
+  |  29 | PA8           |     |     |      | CK     |     |     0 |          | LED        |
+  |  30 | PA9           |     |     |      | TX, BL |     |     0 | USB_VBUS | USB        |
+  |  31 | PA10          |     |     |      | RX, BL |     |     0 | (USB_ID) | CLKOUT     |
+  |  32 | PA11          |     |     |      |        |     |     0 | USB D-   | USB        |
+  |  33 | PA12          |     |     |      |        |     |     0 | USB D+   | USB        |
+  |  34 | PA13          |     |     |      |        |     |       | JTAG     | JTAG MCU   |
+  |  35 | VSS           |     |     |      |        |     |       | supply   | S          |
+  |  36 | VDD           |     |     |      |        |     |       | supply   | S          |
+  |  37 | PA14          |     |     |      |        |     |       | JTAG     | JTAG MCU   |
+  |  38 | PA15          |     |     | NSS  |        |     |       | JTAG     | JTAG MCU   |
+  |  39 | PB3           |     |     | SCK  |        |     |       | JTAG     | JTAG MCU   |
+  |  40 | PB4           |     |     | MISO |        |     |       | (JTAG)   | (JTAG MCU) |
+  |  41 | PB5           |     |     | MOSI |        |     |     2 |          | JTAG FPGA  |
+  |  42 | PB6           |     |     |      | TX     | SCL |     3 |          | JTAG FPGA  |
+  |  43 | PB7           |     |     |      | RX     | SDA |     3 |          | JTAG FPGA  |
+  |  44 | BOOT0         |     |     |      |        |     |       | BOOT0    | S          |
+  |  45 | PB8           |     |     |      |        | SCL |     3 |          | JTAG FPGA  |
+  |  46 | PB9           |     |     |      |        | SDA |     3 |          | JTAG FPGA  |
+  |  47 | VSS           |     |     |      |        |     |       | supply   | S          |
+  |  48 | VDD           |     |     |      |        |     |       | supply   | S          |
