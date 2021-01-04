@@ -2120,8 +2120,6 @@ Connection ~ 7850 2750
 Connection ~ 7750 2650
 Connection ~ 7650 2550
 Connection ~ 7550 2450
-Wire Wire Line
-	7450 2350 7800 2350
 Connection ~ 7450 2350
 Connection ~ 7350 2250
 Connection ~ 7250 2150
@@ -2518,8 +2516,6 @@ Wire Wire Line
 Wire Wire Line
 	9750 2250 9600 2250
 Wire Wire Line
-	7650 2550 7700 2550
-Wire Wire Line
 	9700 2650 9700 2350
 Wire Wire Line
 	9700 2350 9600 2350
@@ -2630,11 +2626,9 @@ Wire Wire Line
 Wire Wire Line
 	9150 4250 9150 5000
 Wire Wire Line
-	7250 2150 7900 2150
+	7250 2150 7600 2150
 Wire Wire Line
 	7350 2250 8350 2250
-Wire Wire Line
-	7150 2050 8350 2050
 $Comp
 L Device:R_Pack04 RN3
 U 1 1 5EAFCC23
@@ -2744,7 +2738,7 @@ Wire Wire Line
 	6300 2800 6300 2350
 Connection ~ 6300 2350
 Wire Wire Line
-	6300 2350 7450 2350
+	6300 2350 7150 2350
 Wire Wire Line
 	6400 2800 6400 2450
 Connection ~ 6400 2450
@@ -2763,8 +2757,6 @@ Wire Wire Line
 Wire Wire Line
 	6700 2800 6700 2750
 Connection ~ 6700 2750
-Wire Wire Line
-	6700 2750 7550 2750
 Wire Wire Line
 	10700 1450 10950 1450
 $Comp
@@ -3060,37 +3052,48 @@ Connection ~ 7250 2250
 Wire Wire Line
 	7250 2250 7350 2250
 Wire Wire Line
-	7150 4250 7150 2050
-Wire Wire Line
 	7850 4250 7850 3000
 Wire Wire Line
 	7850 3000 7900 3000
-Wire Wire Line
-	7900 3000 7900 2150
-Connection ~ 7900 2150
-Wire Wire Line
-	7900 2150 8350 2150
-Wire Wire Line
-	7750 4250 7750 3000
-Wire Wire Line
-	7750 3000 7800 3000
-Wire Wire Line
-	7800 3000 7800 2350
-Connection ~ 7800 2350
-Wire Wire Line
-	7800 2350 8350 2350
 Wire Wire Line
 	7650 4250 7650 3000
 Wire Wire Line
 	7650 3000 7700 3000
 Wire Wire Line
-	7700 3000 7700 2550
-Connection ~ 7700 2550
+	6700 2750 7750 2750
 Wire Wire Line
-	7700 2550 8350 2550
+	7550 4250 7550 3000
 Wire Wire Line
-	7550 4250 7550 2750
-Connection ~ 7550 2750
+	7550 3000 7600 3000
 Wire Wire Line
-	7550 2750 7850 2750
+	7650 2550 7900 2550
+Wire Wire Line
+	7150 2050 7700 2050
+Wire Wire Line
+	7600 3000 7600 2150
+Connection ~ 7600 2150
+Wire Wire Line
+	7600 2150 8350 2150
+Wire Wire Line
+	7700 3000 7700 2050
+Connection ~ 7700 2050
+Wire Wire Line
+	7700 2050 8350 2050
+Wire Wire Line
+	7150 4250 7150 2350
+Connection ~ 7150 2350
+Wire Wire Line
+	7150 2350 7450 2350
+Wire Wire Line
+	7900 3000 7900 2550
+Connection ~ 7900 2550
+Wire Wire Line
+	7900 2550 8350 2550
+Wire Wire Line
+	7450 2350 8350 2350
+Connection ~ 7750 2750
+Wire Wire Line
+	7750 2750 7850 2750
+Wire Wire Line
+	7750 2750 7750 4250
 $EndSCHEMATC
