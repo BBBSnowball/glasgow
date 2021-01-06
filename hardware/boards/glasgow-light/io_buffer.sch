@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 3
+Sheet 3 4
 Title "I/O Buffer"
 Date ""
 Rev "C2"
@@ -3075,7 +3075,7 @@ Connection ~ 7750 2750
 Wire Wire Line
 	7750 2750 7850 2750
 Wire Wire Line
-	7750 2750 7750 4250
+	7750 2750 7750 3550
 Wire Wire Line
 	1650 2500 1650 4650
 Wire Wire Line
@@ -3301,11 +3301,11 @@ L Connector:TestPoint TP?
 U 1 1 604DF2C1
 P 8050 5250
 AR Path="/604DF2C1" Ref="TP?"  Part="1" 
-AR Path="/5C7B59B0/5C9E337E/604DF2C1" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/604DF2C1" Ref="TP32"  Part="1" 
 AR Path="/5C7B59B0/5C9E338E/604DF2C1" Ref="TP?"  Part="1" 
 AR Path="/5FFD4B90/604DF2C1" Ref="TP?"  Part="1" 
 AR Path="/5FFD4BA1/604DF2C1" Ref="TP?"  Part="1" 
-F 0 "TP?" V 7950 5400 50  0000 C CNN
+F 0 "TP32" V 7950 5400 50  0000 C CNN
 F 1 "P5" V 8154 5324 50  0001 C CNN
 F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 8250 5250 50  0001 C CNN
 F 3 "~" H 8250 5250 50  0001 C CNN
@@ -3317,15 +3317,32 @@ L Connector:TestPoint TP?
 U 1 1 604E0486
 P 8050 5450
 AR Path="/604E0486" Ref="TP?"  Part="1" 
-AR Path="/5C7B59B0/5C9E337E/604E0486" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/604E0486" Ref="TP33"  Part="1" 
 AR Path="/5C7B59B0/5C9E338E/604E0486" Ref="TP?"  Part="1" 
 AR Path="/5FFD4B90/604E0486" Ref="TP?"  Part="1" 
 AR Path="/5FFD4BA1/604E0486" Ref="TP?"  Part="1" 
-F 0 "TP?" V 7950 5600 50  0000 C CNN
+F 0 "TP33" V 7950 5600 50  0000 C CNN
 F 1 "P7" V 8154 5524 50  0001 C CNN
 F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 8250 5450 50  0001 C CNN
 F 3 "~" H 8250 5450 50  0001 C CNN
 	1    8050 5450
 	0    1    1    0   
 $EndComp
+$Sheet
+S 8300 3150 500  950 
+U 60515668
+F0 "led_analog" 50
+F1 "led_analog.sch" 50
+F2 "VIO" I L 8300 3350 50 
+F3 "Y7" I L 8300 3550 50 
+$EndSheet
+Text Label 8150 3350 0    50   ~ 0
+VIO
+Wire Wire Line
+	8150 3350 8300 3350
+Connection ~ 7750 3550
+Wire Wire Line
+	7750 3550 7750 4250
+Wire Wire Line
+	7750 3550 8300 3550
 $EndSCHEMATC

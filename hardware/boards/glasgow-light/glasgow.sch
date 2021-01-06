@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title "Base Board"
 Date ""
 Rev "C2"
@@ -2853,8 +2853,6 @@ Wire Wire Line
 	10000 1500 10000 1750
 Wire Wire Line
 	10000 900  10000 1500
-Wire Bus Line
-	-4550 2750 -4550 5700
 Wire Wire Line
 	2300 3350 2300 3500
 Wire Wire Line
@@ -2871,4 +2869,6 @@ F 3 "~" H 2500 3350 50  0001 C CNN
 	1    2300 3350
 	0    1    1    0   
 $EndComp
+Wire Bus Line
+	-4550 2750 -4550 5700
 $EndSCHEMATC
