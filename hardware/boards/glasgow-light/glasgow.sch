@@ -846,17 +846,6 @@ SCL
 Text Label 1100 3500 0    50   ~ 0
 VUSB
 $Comp
-L Connector:TestPoint TP1
-U 1 1 5ADB3D1E
-P 2300 3350
-F 0 "TP1" V 2200 3400 50  0000 L CNN
-F 1 "5V" V 2404 3424 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2500 3350 50  0001 C CNN
-F 3 "~" H 2500 3350 50  0001 C CNN
-	1    2300 3350
-	0    1    1    0   
-$EndComp
-$Comp
 L Connector:TestPoint TP2
 U 1 1 5AE0012C
 P 10400 5700
@@ -1158,11 +1147,6 @@ Wire Wire Line
 	1050 3500 1050 3550
 Wire Wire Line
 	1050 3850 1050 3900
-Wire Wire Line
-	2300 3300 2300 3350
-Connection ~ 2300 3350
-Wire Wire Line
-	2300 3350 2300 3500
 $Sheet
 S 9150 2100 550  850 
 U 5C7B59B0
@@ -2871,4 +2855,20 @@ Wire Wire Line
 	10000 900  10000 1500
 Wire Bus Line
 	-4550 2750 -4550 5700
+Wire Wire Line
+	2300 3350 2300 3500
+Wire Wire Line
+	2300 3300 2300 3350
+Connection ~ 2300 3350
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5ADB3D1E
+P 2300 3350
+F 0 "TP1" V 2200 3400 50  0000 L CNN
+F 1 "5V" V 2404 3424 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2500 3350 50  0001 C CNN
+F 3 "~" H 2500 3350 50  0001 C CNN
+	1    2300 3350
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

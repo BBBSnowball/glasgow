@@ -3096,4 +3096,236 @@ Wire Wire Line
 	1500 2250 1500 3000
 Wire Wire Line
 	1500 3000 1250 3000
+$Comp
+L Connector:TestPoint TP?
+U 1 1 60282967
+P 10450 4200
+AR Path="/60282967" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/60282967" Ref="TP23"  Part="1" 
+AR Path="/5C7B59B0/5C9E338E/60282967" Ref="TP?"  Part="1" 
+AR Path="/5FFD4B90/60282967" Ref="TP?"  Part="1" 
+AR Path="/5FFD4BA1/60282967" Ref="TP?"  Part="1" 
+F 0 "TP23" V 10350 4350 50  0000 C CNN
+F 1 "VCURR" V 10554 4274 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 10650 4200 50  0001 C CNN
+F 3 "~" H 10650 4200 50  0001 C CNN
+	1    10450 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 602A4934
+P 10900 3900
+AR Path="/602A4934" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/602A4934" Ref="TP24"  Part="1" 
+AR Path="/5C7B59B0/5C9E338E/602A4934" Ref="TP?"  Part="1" 
+AR Path="/5FFD4B90/602A4934" Ref="TP?"  Part="1" 
+AR Path="/5FFD4BA1/602A4934" Ref="TP?"  Part="1" 
+F 0 "TP24" V 10800 4050 50  0000 C CNN
+F 1 "GND" V 11004 3974 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 11100 3900 50  0001 C CNN
+F 3 "~" H 11100 3900 50  0001 C CNN
+	1    10900 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 602A7D69
+P 10200 3200
+AR Path="/602A7D69" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/602A7D69" Ref="TP22"  Part="1" 
+AR Path="/5C7B59B0/5C9E338E/602A7D69" Ref="TP?"  Part="1" 
+AR Path="/5FFD4B90/602A7D69" Ref="TP?"  Part="1" 
+AR Path="/5FFD4BA1/602A7D69" Ref="TP?"  Part="1" 
+F 0 "TP22" V 10100 3350 50  0000 C CNN
+F 1 "3V3" V 10304 3274 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 10400 3200 50  0001 C CNN
+F 3 "~" H 10400 3200 50  0001 C CNN
+	1    10200 3200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10450 4200 10400 4200
+Wire Wire Line
+	10900 3900 10850 3900
+Wire Wire Line
+	10850 3900 10850 3700
+Wire Wire Line
+	10200 3200 10300 3200
+Connection ~ 10300 3200
+$Comp
+L Connector:TestPoint TP?
+U 1 1 60327AE0
+P 10200 6350
+AR Path="/60327AE0" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/60327AE0" Ref="TP25"  Part="1" 
+AR Path="/5C7B59B0/5C9E338E/60327AE0" Ref="TP?"  Part="1" 
+AR Path="/5FFD4B90/60327AE0" Ref="TP?"  Part="1" 
+AR Path="/5FFD4BA1/60327AE0" Ref="TP?"  Part="1" 
+F 0 "TP25" V 10100 6500 50  0000 C CNN
+F 1 "VIO" V 10304 6424 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 10400 6350 50  0001 C CNN
+F 3 "~" H 10400 6350 50  0001 C CNN
+	1    10200 6350
+	0    1    1    0   
+$EndComp
+Text Label 10050 6350 0    50   ~ 0
+VIO
+Wire Wire Line
+	10050 6350 10200 6350
+$Comp
+L Connector:TestPoint TP?
+U 1 1 603F6E25
+P 6700 2000
+AR Path="/603F6E25" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/603F6E25" Ref="TP28"  Part="1" 
+AR Path="/5C7B59B0/5C9E338E/603F6E25" Ref="TP?"  Part="1" 
+AR Path="/5FFD4B90/603F6E25" Ref="TP?"  Part="1" 
+AR Path="/5FFD4BA1/603F6E25" Ref="TP?"  Part="1" 
+F 0 "TP28" V 6800 2150 50  0000 C CNN
+F 1 "Y7" V 6804 2074 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6900 2000 50  0001 C CNN
+F 3 "~" H 6900 2000 50  0001 C CNN
+	1    6700 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 603F9CA2
+P 6600 2000
+AR Path="/603F9CA2" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/603F9CA2" Ref="TP27"  Part="1" 
+AR Path="/5C7B59B0/5C9E338E/603F9CA2" Ref="TP?"  Part="1" 
+AR Path="/5FFD4B90/603F9CA2" Ref="TP?"  Part="1" 
+AR Path="/5FFD4BA1/603F9CA2" Ref="TP?"  Part="1" 
+F 0 "TP27" H 6600 2200 50  0000 C CNN
+F 1 "Y6" V 6704 2074 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6800 2000 50  0001 C CNN
+F 3 "~" H 6800 2000 50  0001 C CNN
+	1    6600 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 2000 6500 2550
+Wire Wire Line
+	6600 2000 6600 2650
+Wire Wire Line
+	6700 2000 6700 2750
+$Comp
+L Connector:TestPoint TP?
+U 1 1 6047373A
+P 6950 3050
+AR Path="/6047373A" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/6047373A" Ref="TP29"  Part="1" 
+AR Path="/5C7B59B0/5C9E338E/6047373A" Ref="TP?"  Part="1" 
+AR Path="/5FFD4B90/6047373A" Ref="TP?"  Part="1" 
+AR Path="/5FFD4BA1/6047373A" Ref="TP?"  Part="1" 
+F 0 "TP29" V 6850 3200 50  0000 C CNN
+F 1 "ADC7" V 7054 3124 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7150 3050 50  0001 C CNN
+F 3 "~" H 7150 3050 50  0001 C CNN
+	1    6950 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 60474338
+P 6950 3500
+AR Path="/60474338" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/60474338" Ref="TP30"  Part="1" 
+AR Path="/5C7B59B0/5C9E338E/60474338" Ref="TP?"  Part="1" 
+AR Path="/5FFD4B90/60474338" Ref="TP?"  Part="1" 
+AR Path="/5FFD4BA1/60474338" Ref="TP?"  Part="1" 
+F 0 "TP30" V 6850 3650 50  0000 C CNN
+F 1 "ADC5" V 7054 3574 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7150 3500 50  0001 C CNN
+F 3 "~" H 7150 3500 50  0001 C CNN
+	1    6950 3500
+	1    0    0    -1  
+$EndComp
+Text HLabel 6950 3050 3    50   Input ~ 0
+ADC7
+Text HLabel 6950 3500 3    50   Input ~ 0
+ADC5
+$Comp
+L Connector:TestPoint TP?
+U 1 1 6049E506
+P 6950 3950
+AR Path="/6049E506" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/6049E506" Ref="TP31"  Part="1" 
+AR Path="/5C7B59B0/5C9E338E/6049E506" Ref="TP?"  Part="1" 
+AR Path="/5FFD4B90/6049E506" Ref="TP?"  Part="1" 
+AR Path="/5FFD4BA1/6049E506" Ref="TP?"  Part="1" 
+F 0 "TP31" V 6850 4100 50  0000 C CNN
+F 1 "GND" V 7054 4024 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7150 3950 50  0001 C CNN
+F 3 "~" H 7150 3950 50  0001 C CNN
+	1    6950 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6049EEC3
+P 6950 3950
+AR Path="/5AF7D604/6049EEC3" Ref="#PWR?"  Part="1" 
+AR Path="/5AFBDC9E/6049EEC3" Ref="#PWR?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/6049EEC3" Ref="#PWR0131"  Part="1" 
+AR Path="/5C7B59B0/5C9E338E/6049EEC3" Ref="#PWR?"  Part="1" 
+AR Path="/5FFD4B90/6049EEC3" Ref="#PWR?"  Part="1" 
+AR Path="/5FFD4BA1/6049EEC3" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0131" H 6950 3700 50  0001 C CNN
+F 1 "GND" H 6955 3777 50  0000 C CNN
+F 2 "" H 6950 3950 50  0001 C CNN
+F 3 "" H 6950 3950 50  0001 C CNN
+	1    6950 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 603FA8E6
+P 6500 2000
+AR Path="/603FA8E6" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/603FA8E6" Ref="TP26"  Part="1" 
+AR Path="/5C7B59B0/5C9E338E/603FA8E6" Ref="TP?"  Part="1" 
+AR Path="/5FFD4B90/603FA8E6" Ref="TP?"  Part="1" 
+AR Path="/5FFD4BA1/603FA8E6" Ref="TP?"  Part="1" 
+F 0 "TP26" V 6400 2150 50  0000 C CNN
+F 1 "Y5" V 6604 2074 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6700 2000 50  0001 C CNN
+F 3 "~" H 6700 2000 50  0001 C CNN
+	1    6500 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 604DF2C1
+P 8050 5250
+AR Path="/604DF2C1" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/604DF2C1" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/5C9E338E/604DF2C1" Ref="TP?"  Part="1" 
+AR Path="/5FFD4B90/604DF2C1" Ref="TP?"  Part="1" 
+AR Path="/5FFD4BA1/604DF2C1" Ref="TP?"  Part="1" 
+F 0 "TP?" V 7950 5400 50  0000 C CNN
+F 1 "P5" V 8154 5324 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 8250 5250 50  0001 C CNN
+F 3 "~" H 8250 5250 50  0001 C CNN
+	1    8050 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 604E0486
+P 8050 5450
+AR Path="/604E0486" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/604E0486" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/5C9E338E/604E0486" Ref="TP?"  Part="1" 
+AR Path="/5FFD4B90/604E0486" Ref="TP?"  Part="1" 
+AR Path="/5FFD4BA1/604E0486" Ref="TP?"  Part="1" 
+F 0 "TP?" V 7950 5600 50  0000 C CNN
+F 1 "P7" V 8154 5524 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 8250 5450 50  0001 C CNN
+F 3 "~" H 8250 5450 50  0001 C CNN
+	1    8050 5450
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
