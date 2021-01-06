@@ -145,7 +145,7 @@ Wire Wire Line
 Wire Wire Line
 	5000 3400 5000 3300
 Wire Wire Line
-	5000 3400 5000 3500
+	5000 3400 5000 3450
 Connection ~ 5000 3400
 $Comp
 L power:GND #PWR?
@@ -199,7 +199,7 @@ Wire Wire Line
 Wire Wire Line
 	4800 2900 4700 2900
 Wire Wire Line
-	4700 3300 4450 3300
+	4700 3300 4550 3300
 $Comp
 L Amplifier_Operational:LM358_DFN U1
 U 1 1 5FFBF2D3
@@ -285,7 +285,7 @@ Wire Wire Line
 Wire Wire Line
 	5000 4900 5000 4800
 Wire Wire Line
-	5000 4900 5000 5000
+	5000 4900 5000 4950
 Connection ~ 5000 4900
 $Comp
 L power:GND #PWR?
@@ -331,7 +331,7 @@ Wire Wire Line
 Wire Wire Line
 	4800 4400 4700 4400
 Wire Wire Line
-	4700 4800 4450 4800
+	4700 4800 4550 4800
 $Comp
 L Device:R R?
 U 1 1 5FFF12FA
@@ -417,4 +417,70 @@ Wire Wire Line
 Connection ~ 7900 4250
 Wire Wire Line
 	7900 4250 8000 4250
+$Comp
+L Device:R R?
+U 1 1 6000E9AC
+P 4800 4950
+AR Path="/5AF7D604/6000E9AC" Ref="R?"  Part="1" 
+AR Path="/5AFBDC9E/6000E9AC" Ref="R?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/6000E9AC" Ref="R?"  Part="1" 
+AR Path="/5C7B59B0/5C9E338E/6000E9AC" Ref="R?"  Part="1" 
+AR Path="/5FFD4B90/6000E9AC" Ref="R?"  Part="1" 
+AR Path="/5FFD4BA1/6000E9AC" Ref="R?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/60515668/6000E9AC" Ref="R25"  Part="1" 
+F 0 "R25" H 4750 4950 50  0000 R CNN
+F 1 "DNP/400k" V 4800 4950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4730 4950 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 4800 4950 50  0001 C CNN
+F 4 "Yageo" H -1350 0   50  0001 C CNN "Mfg"
+F 5 "RC0402FR-132K2L" H -1350 0   50  0001 C CNN "MPN"
+F 6 "res-0402-2k2" H 4800 4950 50  0001 C CNN "1b2-bom-key"
+	1    4800 4950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 4950 5000 4950
+Connection ~ 5000 4950
+Wire Wire Line
+	5000 4950 5000 5000
+Wire Wire Line
+	4650 4950 4550 4950
+Wire Wire Line
+	4550 4950 4550 4800
+Connection ~ 4550 4800
+Wire Wire Line
+	4550 4800 4450 4800
+$Comp
+L Device:R R?
+U 1 1 600129BB
+P 4800 3450
+AR Path="/5AF7D604/600129BB" Ref="R?"  Part="1" 
+AR Path="/5AFBDC9E/600129BB" Ref="R?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/600129BB" Ref="R?"  Part="1" 
+AR Path="/5C7B59B0/5C9E338E/600129BB" Ref="R?"  Part="1" 
+AR Path="/5FFD4B90/600129BB" Ref="R?"  Part="1" 
+AR Path="/5FFD4BA1/600129BB" Ref="R?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/60515668/600129BB" Ref="R24"  Part="1" 
+F 0 "R24" H 4750 3450 50  0000 R CNN
+F 1 "DNP/400k" V 4800 3450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4730 3450 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 4800 3450 50  0001 C CNN
+F 4 "Yageo" H -1350 -1500 50  0001 C CNN "Mfg"
+F 5 "RC0402FR-132K2L" H -1350 -1500 50  0001 C CNN "MPN"
+F 6 "res-0402-2k2" H 4800 3450 50  0001 C CNN "1b2-bom-key"
+	1    4800 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 3450 5000 3450
+Connection ~ 5000 3450
+Wire Wire Line
+	5000 3450 5000 3500
+Wire Wire Line
+	4650 3450 4550 3450
+Wire Wire Line
+	4550 3450 4550 3300
+Connection ~ 4550 3300
+Wire Wire Line
+	4550 3300 4450 3300
 $EndSCHEMATC
