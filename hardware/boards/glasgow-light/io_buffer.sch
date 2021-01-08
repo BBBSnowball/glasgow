@@ -16,7 +16,7 @@ $EndDescr
 Wire Wire Line
 	2050 1650 2100 1650
 Text HLabel 800  2400 0    50   Input ~ 0
-Q0
+Q6
 Text HLabel 2050 1650 0    50   Input ~ 0
 DIR0
 $Comp
@@ -416,7 +416,7 @@ Wire Wire Line
 Wire Wire Line
 	2050 4850 2100 4850
 Text HLabel 800  2800 0    50   Input ~ 0
-Q4
+Q5
 Text HLabel 2050 4850 0    50   Input ~ 0
 DIR4
 $Comp
@@ -541,7 +541,7 @@ Wire Wire Line
 Wire Wire Line
 	2050 6450 2100 6450
 Text HLabel 800  3000 0    50   Input ~ 0
-Q6
+Q1
 Text HLabel 2050 6450 0    50   Input ~ 0
 DIR6
 $Comp
@@ -666,7 +666,7 @@ Wire Wire Line
 Wire Wire Line
 	3800 2450 3850 2450
 Text HLabel 800  2500 0    50   Input ~ 0
-Q1
+Q4
 Text HLabel 3800 2450 0    50   Input ~ 0
 DIR1
 $Comp
@@ -916,7 +916,7 @@ Wire Wire Line
 Wire Wire Line
 	3800 5650 3850 5650
 Text HLabel 800  2900 0    50   Input ~ 0
-Q5
+Q0
 Text HLabel 3800 5650 0    50   Input ~ 0
 DIR5
 $Comp

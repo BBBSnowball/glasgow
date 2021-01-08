@@ -82,6 +82,60 @@ Build a RevC-light variant:
     - This is still likely to fail on brown-out. The GD32 can reset the FPGA in that case but this
       isn't guaranteed to work.
 
+- pinout revB:
+  - see https://github.com/GlasgowEmbedded/glasgow/blob/9fff92ddfbfd309c62aaf3e4170a904e4a426382/firmware/glasgow.h
+  - A0: ALERT (INT for I2C)
+  - A3: FPGA_CDONE
+    FPGA: CDONE
+  - A1: FPGA_CRESET (REVC)
+  - B2: SI
+    FPGA: SPI_SI
+  - B3: SS_N
+    FPGA: SPI_SS
+  - B4: SCK
+    FPGA: SPI_SCK
+  - B5: not present in header
+    FPGA: SPI_SO
+  - D0: ENVA (enable supply for port A)
+  - D1: FPGA_CRESET (REVB)
+  - D2: led
+  - D3: ^^
+  - D4: ^^
+  - D5: ^^
+  - D6: ENVB (enable supply for port B)
+  - D7: OEQ_N_REVAB -> direction for all ports
+
+  - IFCLK: CLKIF
+    FPGA: G3
+  - CLKOUT: CLKREF
+    FPGA: G6
+
+  - of these, we need: SPI_SI, SPI_SS, SPI_SCK, CRESET
+  - we should also have: SPI_SO, CDONE
+
+- How does configuration work for ICE40? Which pins do we need?
+  - http://www.latticesemi.com/-/media/LatticeSemi/Documents/ApplicationNotes/IK/FPGA-TN-02001-30-iCE40-Programming-Configuration.ashx?document_id=46502
+  - Glasgow seems to be using Slave SPI mode, i.e. FX2 is SPI master.
+    https://github.com/GlasgowEmbedded/glasgow/blob/master/firmware/fpga.c#L68
+  - SPI_SS_B must be low after reset to select Slave SPI mode.
+  - We should enable a pullup for CDONE in the MCU because the FPGA only has a very weak pullup.
+
+  - SPI can use arbitrary pins so we can use the same ones as for config. The LM devices don't
+    support arbitrary pins but the fixed ones are the same ones as the config pins.
+  - file:///home/user/Downloads/FPGA-TN-02010-1-7-iCE40-I2C-and-SPI-Hardened-IP-Usage-Guide.pdf
+
+  - The datasheet doesn't mention JTAG at all. Don't they have any JTAG port? -> Indeed they don't.
+    https://stackoverflow.com/questions/49840479/lattice-ice40-jtag
+
+  - Interface to the SPI hard IP:
+    https://www.latticesemi.com/-/media/LatticeSemi/Documents/ApplicationNotes/AD/AdvancediCE40SPII2CHardenedIPUsageGuide.ashx?document_id=50117
+    http://www.clifford.at/icestorm/ultraplus.html
+  - https://github.com/damdoy/ice40_ultraplus_examples/tree/master/spi_hw
+    https://github.com/damdoy/ice40_ultraplus_examples/blob/master/spi_hw/top.v
+  - I'm not sure whether the hard IP saves an logic at all for a slave...
+
+  - GD32: USART has a max frequency of 6.75 MHz so we definetely want the SPI with 27 MHz.
+
 - pinout for FPGA:
   - available: 39 GPIO
   - 2x I2C

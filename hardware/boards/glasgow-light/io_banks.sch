@@ -13,53 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Entry Wire Line
-	3350 4850 3450 4950
-Entry Wire Line
-	3350 4950 3450 5050
-Entry Wire Line
-	3350 5050 3450 5150
-Entry Wire Line
-	3350 5150 3450 5250
-Entry Wire Line
-	3350 5250 3450 5350
-Entry Wire Line
-	3350 5350 3450 5450
-Entry Wire Line
-	3350 5450 3450 5550
-Entry Wire Line
-	3350 5550 3450 5650
-Text Label 3250 4850 0    50   ~ 0
-QA0
-Text Label 3250 4950 0    50   ~ 0
-QA1
-Text Label 3250 5050 0    50   ~ 0
-QA2
-Text Label 3250 5150 0    50   ~ 0
-QA3
-Text Label 3250 5250 0    50   ~ 0
-QA4
-Text Label 3250 5350 0    50   ~ 0
-QA5
-Text Label 3250 5450 0    50   ~ 0
-QA6
-Text Label 3250 5550 0    50   ~ 0
-QA7
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5C9E33BC
-P 1300 2800
-AR Path="/5C9E33BC" Ref="#PWR?"  Part="1" 
-AR Path="/5C7B59B0/5C9E33BC" Ref="#PWR0102"  Part="1" 
-F 0 "#PWR0102" H 1300 2650 50  0001 C CNN
-F 1 "+3.3V" V 1300 3050 50  0000 C CNN
-F 2 "" H 1300 2800 50  0001 C CNN
-F 3 "" H 1300 2800 50  0001 C CNN
-	1    1300 2800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1300 2850 1300 2800
 $Comp
 L Device:LED D?
 U 1 1 5C9E3491
@@ -279,54 +232,6 @@ Text Label 9150 1650 0    50   ~ 0
 U4
 Text Label 9150 1850 0    50   ~ 0
 U5
-Entry Wire Line
-	2500 4850 2400 4950
-Entry Wire Line
-	2500 5050 2400 5150
-Entry Wire Line
-	2500 4950 2400 5050
-Entry Wire Line
-	2500 5150 2400 5250
-Entry Wire Line
-	2500 5250 2400 5350
-Entry Wire Line
-	2500 5350 2400 5450
-Entry Wire Line
-	2500 5450 2400 5550
-Entry Wire Line
-	2500 5550 2400 5650
-Wire Wire Line
-	2500 4850 2650 4850
-Wire Wire Line
-	2650 4950 2500 4950
-Wire Wire Line
-	2500 5050 2650 5050
-Wire Wire Line
-	2650 5150 2500 5150
-Wire Wire Line
-	2500 5250 2650 5250
-Wire Wire Line
-	2650 5350 2500 5350
-Wire Wire Line
-	2500 5450 2650 5450
-Wire Wire Line
-	2650 5550 2500 5550
-Text Label 2500 4850 0    50   ~ 0
-DA0
-Text Label 2500 4950 0    50   ~ 0
-DA1
-Text Label 2500 5050 0    50   ~ 0
-DA2
-Text Label 2500 5150 0    50   ~ 0
-DA3
-Text Label 2500 5250 0    50   ~ 0
-DA4
-Text Label 2500 5350 0    50   ~ 0
-DA5
-Text Label 2500 5450 0    50   ~ 0
-DA6
-Text Label 2500 5550 0    50   ~ 0
-DA7
 $Sheet
 S 2650 3850 550  2050
 U 5C9E337E
@@ -385,102 +290,6 @@ Wire Wire Line
 	2550 4350 2650 4350
 Wire Wire Line
 	2650 4250 2550 4250
-Entry Wire Line
-	1950 3750 2050 3850
-Entry Wire Line
-	1950 3850 2050 3950
-Entry Wire Line
-	1950 3950 2050 4050
-Entry Wire Line
-	1950 4050 2050 4150
-Entry Wire Line
-	1950 4150 2050 4250
-Entry Wire Line
-	1950 4250 2050 4350
-Entry Wire Line
-	1950 4350 2050 4450
-Entry Wire Line
-	1950 4450 2050 4550
-Entry Wire Line
-	1950 4550 2050 4650
-Entry Wire Line
-	1950 4650 2050 4750
-Entry Wire Line
-	1950 4850 2050 4950
-Entry Wire Line
-	1950 5050 2050 5150
-Entry Wire Line
-	1950 5350 2050 5450
-Entry Wire Line
-	1950 5450 2050 5550
-Entry Wire Line
-	1950 5550 2050 5650
-Entry Wire Line
-	1950 5650 2050 5750
-Wire Wire Line
-	1950 3750 1800 3750
-Wire Wire Line
-	1800 3850 1950 3850
-Wire Wire Line
-	1950 3950 1800 3950
-Wire Wire Line
-	1800 4050 1950 4050
-Wire Wire Line
-	1950 4150 1800 4150
-Wire Wire Line
-	1800 4250 1950 4250
-Wire Wire Line
-	1950 4350 1800 4350
-Wire Wire Line
-	1800 4450 1950 4450
-Wire Wire Line
-	1950 4550 1850 4550
-Wire Wire Line
-	1800 4650 1900 4650
-Wire Wire Line
-	1800 4850 1950 4850
-Wire Wire Line
-	1800 5050 1950 5050
-Wire Wire Line
-	1950 5350 1800 5350
-Wire Wire Line
-	1950 5450 1800 5450
-Wire Wire Line
-	1800 5550 1950 5550
-Wire Wire Line
-	1950 5650 1800 5650
-Text Label 1800 4550 0    50   ~ 0
-QA6
-Text Label 1800 4650 0    50   ~ 0
-QA4
-Text Label 1800 4850 0    50   ~ 0
-QA7
-Text Label 1800 5050 0    50   ~ 0
-QA5
-Text Label 1800 5550 0    50   ~ 0
-QA3
-Text Label 1800 5350 0    50   ~ 0
-QA2
-Text Label 1800 5450 0    50   ~ 0
-QA1
-Text Label 1800 5650 0    50   ~ 0
-QA0
-Text Label 1800 4350 0    50   ~ 0
-DA0
-Text Label 1800 4050 0    50   ~ 0
-DA1
-Text Label 1800 4150 0    50   ~ 0
-DA2
-Text Label 1800 4450 0    50   ~ 0
-DA3
-Text Label 1800 3850 0    50   ~ 0
-DA4
-Text Label 1800 4250 0    50   ~ 0
-DA5
-Text Label 1800 3750 0    50   ~ 0
-DA6
-Text Label 1800 3950 0    50   ~ 0
-DA7
 $Comp
 L Connector_Generic:Conn_01x03 J10
 U 1 1 5C072C23
@@ -538,20 +347,6 @@ F 3 "" H 4300 2700 50  0001 C CNN
 $EndComp
 Text Label 3700 2400 0    50   ~ 0
 ~SYNC
-Wire Wire Line
-	1800 4750 1850 4750
-Wire Wire Line
-	1850 4750 1850 4550
-Connection ~ 1850 4550
-Wire Wire Line
-	1850 4550 1800 4550
-Wire Wire Line
-	1800 4950 1900 4950
-Wire Wire Line
-	1900 4950 1900 4650
-Connection ~ 1900 4650
-Wire Wire Line
-	1900 4650 1950 4650
 Wire Notes Line
 	10350 1250 10400 1250
 Wire Notes Line
@@ -601,14 +396,6 @@ F 3 "" H 2650 2800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1800 2400 1800 3450
-Wire Wire Line
-	1800 5250 2200 5250
-Text HLabel 1850 5800 3    50   Input ~ 0
-CLKREF
-Wire Wire Line
-	1800 5150 1850 5150
-Wire Wire Line
-	1850 5150 1850 5800
 $Comp
 L Device:R R?
 U 1 1 5CBF4EC8
@@ -696,8 +483,6 @@ Wire Notes Line
 	750  4950 900  4950
 Text Notes 3850 2200 0    50   ~ 0
 Synchronization input/output accomodates multiple I/O standards: Vil=0.8V, Vih=2.0V.\n * Nominally, ~SYNC~ is open-drain and 3.3V, with weak internal pull-up.\n * Nevertheless, ~SYNC~ can be connected to 5V circuits directly.\n * ~SYNC~ may also be driven as push-pull to increase bandwidth.\n   Care must be taken to avoid contention. Nevertheless, two Glasgows \n   contending on ~SYNC~ will not exceed absolute maximum ratings.\n   A 47 ohm series resistor is recommended for other drivers.
-Wire Bus Line
-	2050 6000 2400 6000
 $Comp
 L Device:D_Zener D12
 U 1 1 5CB8809B
@@ -790,132 +575,6 @@ F 6 "res-0402-47r" H 2400 3550 50  0001 C CNN "1b2-bom-key"
 $EndComp
 Wire Wire Line
 	1800 2400 3100 2400
-$Comp
-L FPGA_Lattice:ICE40UP5K-SG48ITR U?
-U 1 1 6031E849
-P -850 4300
-AR Path="/6031E849" Ref="U?"  Part="1" 
-AR Path="/5C7B59B0/6031E849" Ref="U5"  Part="1" 
-F 0 "U5" H -1150 5350 50  0000 L CNN
-F 1 "ICE40UP5K-SG48ITR" H -1350 3150 50  0000 L CNN
-F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm" H -850 3250 50  0001 C CNN
-F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra" H -1250 5300 50  0001 C CNN
-F 4 "Lattice" H -850 4300 50  0001 C CNN "Mfg"
-F 5 "ICE40UP5K-SG48ITR50" H -850 4300 50  0001 C CNN "MPN"
-	1    -850 4300
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	-200 3700 -450 3700
-Wire Wire Line
-	-200 3800 -450 3800
-Wire Wire Line
-	-200 3900 -450 3900
-Wire Wire Line
-	-200 4000 -450 4000
-Wire Wire Line
-	-200 4100 -450 4100
-Wire Wire Line
-	-200 4200 -450 4200
-Wire Wire Line
-	-200 4300 -450 4300
-Wire Wire Line
-	-200 4400 -450 4400
-Wire Wire Line
-	-200 4500 -450 4500
-Wire Wire Line
-	-200 4600 -450 4600
-Wire Wire Line
-	-200 4700 -450 4700
-Wire Wire Line
-	-200 4800 -450 4800
-Wire Wire Line
-	-200 4900 -450 4900
-Wire Wire Line
-	-200 5000 -450 5000
-Entry Wire Line
-	-200 3700 -100 3800
-Entry Wire Line
-	-200 3800 -100 3900
-Entry Wire Line
-	-200 3900 -100 4000
-Entry Wire Line
-	-200 4000 -100 4100
-Entry Wire Line
-	-200 4100 -100 4200
-Entry Wire Line
-	-200 4200 -100 4300
-Entry Wire Line
-	-200 4300 -100 4400
-Entry Wire Line
-	-200 4400 -100 4500
-Entry Wire Line
-	-200 4500 -100 4600
-Entry Wire Line
-	-200 4600 -100 4700
-Entry Wire Line
-	-200 4700 -100 4800
-Entry Wire Line
-	-200 4800 -100 4900
-Entry Wire Line
-	-200 4900 -100 5000
-Entry Wire Line
-	-200 5000 -100 5100
-Text Label -400 3800 0    50   ~ 0
-QB6
-Text Label -400 3700 0    50   ~ 0
-QB5
-Text Label -400 4000 0    50   ~ 0
-QB4
-Text Label -400 3900 0    50   ~ 0
-QB3
-Text Label -400 4100 0    50   ~ 0
-QB2
-Text Label -400 4200 0    50   ~ 0
-QB1
-Text Label -400 4300 0    50   ~ 0
-QB0
-$Comp
-L power:+3.3V #PWR?
-U 1 1 6031E872
-P -850 3150
-AR Path="/6031E872" Ref="#PWR?"  Part="1" 
-AR Path="/5C7B59B0/6031E872" Ref="#PWR0113"  Part="1" 
-F 0 "#PWR0113" H -850 3000 50  0001 C CNN
-F 1 "+3.3V" V -850 3400 50  0000 C CNN
-F 2 "" H -850 3150 50  0001 C CNN
-F 3 "" H -850 3150 50  0001 C CNN
-	1    -850 3150
-	1    0    0    -1  
-$EndComp
-Text Label -400 4400 0    50   ~ 0
-QA7
-Text Label -400 4600 0    50   ~ 0
-QA6
-Text Label -400 4700 0    50   ~ 0
-QA5
-Text Label -400 4500 0    50   ~ 0
-QA4
-Text Label -400 4900 0    50   ~ 0
-QA3
-Text Label -400 5000 0    50   ~ 0
-QA2
-Text Label -400 4800 0    50   ~ 0
-QA1
-Wire Wire Line
-	-200 5100 -450 5100
-Wire Wire Line
-	-200 5200 -450 5200
-Wire Wire Line
-	-200 5300 -450 5300
-Text Label -200 5100 2    50   ~ 0
-SCL
-Text Label -200 5200 2    50   ~ 0
-SDA
-Text Label -200 5300 2    50   ~ 0
-~SYNC
-Wire Wire Line
-	-850 3200 -850 3150
 Wire Wire Line
 	2550 4700 2650 4700
 $Comp
@@ -944,9 +603,6 @@ F 3 "" H 2550 4600 50  0001 C CNN
 	1    2550 4600
 	0    1    1    0   
 $EndComp
-Connection ~ 2400 6000
-Wire Bus Line
-	2400 6000 3450 6000
 Text Notes 4150 5150 0    50   ~ 0
 Addr Pull: 0100000
 Wire Wire Line
@@ -1007,12 +663,52 @@ Text GLabel 3600 5650 2    50   Input ~ 0
 VIO_DAC
 Wire Wire Line
 	3200 5650 3600 5650
-Wire Bus Line
-	3450 4950 3450 6000
-Wire Bus Line
-	2400 4950 2400 6000
-Wire Bus Line
-	-100 3800 -100 6000
-Wire Bus Line
-	2050 3850 2050 6000
+Text HLabel 3350 4850 2    50   Input ~ 0
+QA0
+Text HLabel 3350 5050 2    50   Input ~ 0
+QA2
+Text HLabel 3350 5150 2    50   Input ~ 0
+QA3
+Text HLabel 3350 5250 2    50   Input ~ 0
+QA4
+Text HLabel 3350 5350 2    50   Input ~ 0
+QA5
+Text HLabel 3350 5450 2    50   Input ~ 0
+QA6
+Text HLabel 3350 5550 2    50   Input ~ 0
+QA7
+Text HLabel 3350 4950 2    50   Input ~ 0
+QA1
+Text HLabel 2500 5550 0    50   Input ~ 0
+DA7
+Text HLabel 2500 5450 0    50   Input ~ 0
+DA6
+Text HLabel 2500 5350 0    50   Input ~ 0
+DA5
+Text HLabel 2500 5250 0    50   Input ~ 0
+DA4
+Text HLabel 2500 5150 0    50   Input ~ 0
+DA3
+Text HLabel 2500 5050 0    50   Input ~ 0
+DA2
+Text HLabel 2500 4950 0    50   Input ~ 0
+DA1
+Text HLabel 2500 4850 0    50   Input ~ 0
+DA0
+Wire Wire Line
+	2500 4850 2650 4850
+Wire Wire Line
+	2650 4950 2500 4950
+Wire Wire Line
+	2500 5050 2650 5050
+Wire Wire Line
+	2650 5150 2500 5150
+Wire Wire Line
+	2500 5250 2650 5250
+Wire Wire Line
+	2650 5350 2500 5350
+Wire Wire Line
+	2500 5450 2650 5450
+Wire Wire Line
+	2650 5550 2500 5550
 $EndSCHEMATC
