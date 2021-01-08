@@ -1845,7 +1845,7 @@ Wire Wire Line
 	7900 900  7900 950 
 Connection ~ 5950 1350
 Connection ~ 5950 950 
-Text Label -4950 5000 0    50   ~ 0
+Text Label -4650 5000 2    50   ~ 0
 CLKREF
 $Comp
 L Device:C C30
@@ -2583,8 +2583,6 @@ Wire Wire Line
 	-5000 3450 -4750 3450
 Text Label -2800 3350 2    50   ~ 0
 DA0
-Text Label -4800 4800 2    50   ~ 0
-QA0
 Text Label -4750 2850 2    50   ~ 0
 ~SYNC
 Text Label -2800 3250 2    50   ~ 0
@@ -2599,40 +2597,16 @@ Wire Wire Line
 	-4800 4900 -5000 4900
 Wire Wire Line
 	-5000 4800 -4800 4800
-Text Label -2800 3650 2    50   ~ 0
+Text Label -4800 4800 2    50   ~ 0
 DA2
 Wire Wire Line
 	-4800 3150 -5000 3150
 Wire Wire Line
-	-2750 3850 -2800 3850
+	-2800 4150 -3000 4150
 Wire Wire Line
-	-2750 4150 -3000 4150
+	-2800 4250 -3000 4250
 Wire Wire Line
-	-2750 4250 -3000 4250
-Wire Wire Line
-	-2750 4350 -3000 4350
-Entry Wire Line
-	-2750 3050 -2650 3150
-Entry Wire Line
-	-2750 3250 -2650 3350
-Entry Wire Line
-	-2750 3350 -2650 3450
-Entry Wire Line
-	-2750 3450 -2650 3550
-Entry Wire Line
-	-2750 3550 -2650 3650
-Entry Wire Line
-	-2750 3650 -2650 3750
-Entry Wire Line
-	-2750 3850 -2650 3950
-Entry Wire Line
-	-2750 3950 -2650 4050
-Entry Wire Line
-	-2750 4150 -2650 4250
-Entry Wire Line
-	-2750 4250 -2650 4350
-Entry Wire Line
-	-2750 4350 -2650 4450
+	-2800 4350 -3000 4350
 $Comp
 L power:+3.3V #PWR0113
 U 1 1 603C6632
@@ -2648,40 +2622,40 @@ F 3 "" H -3400 2500 50  0001 C CNN
 $EndComp
 Text Label -2950 3850 0    50   ~ 0
 QA6
-Text Label -2950 3950 0    50   ~ 0
+Text Label -4800 5200 2    50   ~ 0
 QA4
 Text Label -2800 4350 2    50   ~ 0
 QA3
 Text Label -2800 4150 2    50   ~ 0
 QA2
-Text Label -4800 5200 2    50   ~ 0
+Text Label -2800 3450 2    50   ~ 0
 QA1
 Wire Wire Line
 	-3400 2550 -3400 2500
-Text Label -2950 3050 0    50   ~ 0
+Text Label -2800 3050 2    50   ~ 0
 DA1
 Text Label -2800 4250 2    50   ~ 0
 DA3
 Text Label -4800 5100 2    50   ~ 0
 DA4
-Text Label -2800 3550 2    50   ~ 0
+Text Label -2800 3650 2    50   ~ 0
 DA5
 Text Label -4800 4900 2    50   ~ 0
 DA6
 Text Label -4800 3150 2    50   ~ 0
 DA7
 Wire Wire Line
-	-3000 3050 -2750 3050
+	-3000 3050 -2800 3050
 Wire Wire Line
-	-3000 3250 -2750 3250
+	-3000 3250 -2800 3250
 Wire Wire Line
-	-3000 3350 -2750 3350
+	-3000 3350 -2800 3350
 Wire Wire Line
-	-3000 3450 -2750 3450
+	-3000 3450 -2800 3450
 Wire Wire Line
-	-3000 3550 -2750 3550
+	-3000 3550 -2800 3550
 Wire Wire Line
-	-3000 3650 -2750 3650
+	-3000 3650 -2800 3650
 $Comp
 L FPGA_Lattice:ICE40UP5K-SG48ITR U5
 U 1 1 603C664C
@@ -2701,11 +2675,10 @@ Wire Wire Line
 	-2800 3850 -2800 4050
 Wire Wire Line
 	-2800 4050 -3000 4050
-Connection ~ -2800 3850
 Wire Wire Line
 	-3000 3850 -2800 3850
 Wire Wire Line
-	-2550 3950 -2550 3750
+	-2750 3950 -2750 3750
 Wire Wire Line
 	-4750 2850 -5000 2850
 Text Label 9900 3000 2    50   ~ 0
@@ -2772,12 +2745,22 @@ Wire Wire Line
 	9700 3100 9900 3100
 Wire Wire Line
 	9900 3000 9700 3000
-Wire Wire Line
-	-3000 3750 -2550 3750
-Wire Wire Line
-	-3000 3950 -2550 3950
-Wire Bus Line
-	-2650 3150 -2650 4550
-Text Label -2800 3450 2    50   ~ 0
+Text Label -2800 3550 2    50   ~ 0
 QA0
+Wire Wire Line
+	-3000 4450 -2750 4450
+Wire Wire Line
+	-3000 4550 -2750 4550
+Wire Wire Line
+	-3000 4650 -2750 4650
+Wire Wire Line
+	-3000 3750 -2750 3750
+Wire Wire Line
+	-3000 3950 -2750 3950
+Text Label -2750 4450 2    50   ~ 0
+LED0
+Text Label -2750 4550 2    50   ~ 0
+LED1
+Text Label -2750 4650 2    50   ~ 0
+LED2
 $EndSCHEMATC
