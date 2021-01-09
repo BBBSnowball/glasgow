@@ -811,21 +811,21 @@ $EndComp
 $Comp
 L Device:LED D4
 U 1 1 5B097E38
-P 9800 1500
-F 0 "D4" H 9500 1500 50  0000 C CNN
-F 1 "YEL" H 9350 1500 50  0000 C CNN
-F 2 "LED_SMD:LED_0603_1608Metric" H 9800 1500 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/445/150060YS75000-368983.pdf" H 9800 1500 50  0001 C CNN
-F 4 "Wurth Electronics" H -450 0   50  0001 C CNN "Mfg"
-F 5 "150060YS75000" H -450 0   50  0001 C CNN "MPN"
-F 6 "led-0603-yel" H 9800 1500 50  0001 C CNN "1b2-bom-key"
-	1    9800 1500
+P 9800 1100
+F 0 "D4" H 9500 1100 50  0000 C CNN
+F 1 "YEL" H 9350 1100 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 9800 1100 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/445/150060YS75000-368983.pdf" H 9800 1100 50  0001 C CNN
+F 4 "Wurth Electronics" H -450 -400 50  0001 C CNN "Mfg"
+F 5 "150060YS75000" H -450 -400 50  0001 C CNN "MPN"
+F 6 "led-0603-yel" H 9800 1100 50  0001 C CNN "1b2-bom-key"
+	1    9800 1100
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	10000 900  9950 900 
 Wire Wire Line
-	10000 1500 9950 1500
+	10000 1100 9950 1100
 $Comp
 L Device:R R12
 U 1 1 5B18B70C
@@ -841,8 +841,8 @@ F 6 "res-0402-20k" H 9450 900 50  0001 C CNN "1b2-bom-key"
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	8900 1500 9300 1500
-Text Label 8900 1500 0    50   ~ 0
+	8900 1100 9300 1100
+Text Label 8900 1100 0    50   ~ 0
 LED_ACT
 Wire Wire Line
 	9250 900  9300 900 
@@ -851,20 +851,19 @@ Wire Wire Line
 $Comp
 L Device:R R15
 U 1 1 5B2E1435
-P 9450 1500
-F 0 "R15" V 9350 1500 50  0000 C CNN
-F 1 "2k2" V 9450 1500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 9380 1500 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 9450 1500 50  0001 C CNN
-F 4 "Yageo" H -450 0   50  0001 C CNN "Mfg"
-F 5 "RC0402FR-132K2L" H -450 0   50  0001 C CNN "MPN"
-F 6 "res-0402-2k2" H 9450 1500 50  0001 C CNN "1b2-bom-key"
-	1    9450 1500
+P 9450 1100
+F 0 "R15" V 9350 1100 50  0000 C CNN
+F 1 "2k2" V 9450 1100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 9380 1100 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 9450 1100 50  0001 C CNN
+F 4 "Yageo" H -450 -400 50  0001 C CNN "Mfg"
+F 5 "RC0402FR-132K2L" H -450 -400 50  0001 C CNN "MPN"
+F 6 "res-0402-2k2" H 9450 1100 50  0001 C CNN "1b2-bom-key"
+	1    9450 1100
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	9650 1500 9600 1500
-Connection ~ 10000 1500
+	9650 1100 9600 1100
 Text Notes 10600 4700 0    50   ~ 0
 500 mA @ 3V3
 Wire Wire Line
@@ -2511,18 +2510,16 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0120
 U 1 1 5B138DA0
-P 10000 1750
-F 0 "#PWR0120" H 10000 1500 50  0001 C CNN
-F 1 "GND" H 10005 1577 50  0000 C CNN
-F 2 "" H 10000 1750 50  0001 C CNN
-F 3 "" H 10000 1750 50  0001 C CNN
-	1    10000 1750
+P 10000 1150
+F 0 "#PWR0120" H 10000 900 50  0001 C CNN
+F 1 "GND" H 10005 977 50  0000 C CNN
+F 2 "" H 10000 1150 50  0001 C CNN
+F 3 "" H 10000 1150 50  0001 C CNN
+	1    10000 1150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10000 1500 10000 1750
-Wire Wire Line
-	10000 900  10000 1500
+	10000 900  10000 1100
 Wire Wire Line
 	2300 3350 2300 3500
 Wire Wire Line
@@ -2573,10 +2570,6 @@ Wire Wire Line
 	-5000 3850 -4800 3850
 Wire Wire Line
 	-4800 3950 -5000 3950
-Text Label -4750 3550 2    50   ~ 0
-SDA
-Text Label -4750 3450 2    50   ~ 0
-SCL
 Wire Wire Line
 	-4750 3550 -5000 3550
 Wire Wire Line
@@ -2759,8 +2752,145 @@ Wire Wire Line
 	-3000 3950 -2750 3950
 Text Label -2750 4450 2    50   ~ 0
 LED0
-Text Label -2750 4550 2    50   ~ 0
-LED1
 Text Label -2750 4650 2    50   ~ 0
+LED1
+Text Label -2750 4550 2    50   ~ 0
 LED2
+Connection ~ 10000 1100
+Wire Wire Line
+	10000 1100 10000 1150
+$Comp
+L Device:LED D5
+U 1 1 60A57A73
+P 9450 1500
+F 0 "D5" H 9150 1500 50  0000 C CNN
+F 1 "YEL" H 9000 1500 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 9450 1500 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/445/150060YS75000-368983.pdf" H 9450 1500 50  0001 C CNN
+F 4 "Wurth Electronics" H -800 0   50  0001 C CNN "Mfg"
+F 5 "150060YS75000" H -800 0   50  0001 C CNN "MPN"
+F 6 "led-0603-yel" H 9450 1500 50  0001 C CNN "1b2-bom-key"
+	1    9450 1500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D14
+U 1 1 60A58470
+P 9450 1700
+F 0 "D14" H 9150 1700 50  0000 C CNN
+F 1 "YEL" H 9000 1700 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 9450 1700 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/445/150060YS75000-368983.pdf" H 9450 1700 50  0001 C CNN
+F 4 "Wurth Electronics" H -800 200 50  0001 C CNN "Mfg"
+F 5 "150060YS75000" H -800 200 50  0001 C CNN "MPN"
+F 6 "led-0603-yel" H 9450 1700 50  0001 C CNN "1b2-bom-key"
+	1    9450 1700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D15
+U 1 1 60A58B7D
+P 9450 1900
+F 0 "D15" H 9150 1900 50  0000 C CNN
+F 1 "YEL" H 9000 1900 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 9450 1900 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/445/150060YS75000-368983.pdf" H 9450 1900 50  0001 C CNN
+F 4 "Wurth Electronics" H -800 400 50  0001 C CNN "Mfg"
+F 5 "150060YS75000" H -800 400 50  0001 C CNN "MPN"
+F 6 "led-0603-yel" H 9450 1900 50  0001 C CNN "1b2-bom-key"
+	1    9450 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 60A5E017
+P 9200 1700
+F 0 "#PWR0102" H 9200 1550 50  0001 C CNN
+F 1 "+3.3V" V 9200 1950 50  0000 C CNN
+F 2 "" H 9200 1700 50  0001 C CNN
+F 3 "" H 9200 1700 50  0001 C CNN
+	1    9200 1700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9200 1700 9250 1700
+Wire Wire Line
+	9250 1700 9250 1500
+Wire Wire Line
+	9250 1500 9300 1500
+Connection ~ 9250 1700
+Wire Wire Line
+	9250 1700 9300 1700
+Wire Wire Line
+	9250 1700 9250 1900
+Wire Wire Line
+	9250 1900 9300 1900
+Wire Wire Line
+	9600 1900 10000 1900
+Wire Wire Line
+	9600 1700 10000 1700
+Wire Wire Line
+	9600 1500 10000 1500
+Wire Wire Line
+	10300 1500 10500 1500
+Wire Wire Line
+	10300 1700 10500 1700
+Wire Wire Line
+	10300 1900 10500 1900
+Text Label 10500 1500 2    50   ~ 0
+LED0
+Text Label 10500 1700 2    50   ~ 0
+LED1
+Text Label 10500 1900 2    50   ~ 0
+LED2
+$Comp
+L Device:R R28
+U 1 1 60A5FEBF
+P 10150 1900
+F 0 "R28" V 10050 1900 50  0000 C CNN
+F 1 "0" V 10150 1900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 10080 1900 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 10150 1900 50  0001 C CNN
+F 4 "Yageo" H 250 400 50  0001 C CNN "Mfg"
+F 5 "RC0402FR-132K2L" H 250 400 50  0001 C CNN "MPN"
+F 6 "res-0402-2k2" H 10150 1900 50  0001 C CNN "1b2-bom-key"
+	1    10150 1900
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R R27
+U 1 1 60A5F89E
+P 10150 1700
+F 0 "R27" V 10050 1700 50  0000 C CNN
+F 1 "0" V 10150 1700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 10080 1700 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 10150 1700 50  0001 C CNN
+F 4 "Yageo" H 250 200 50  0001 C CNN "Mfg"
+F 5 "RC0402FR-132K2L" H 250 200 50  0001 C CNN "MPN"
+F 6 "res-0402-2k2" H 10150 1700 50  0001 C CNN "1b2-bom-key"
+	1    10150 1700
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R R26
+U 1 1 60A5E6F8
+P 10150 1500
+F 0 "R26" V 10050 1500 50  0000 C CNN
+F 1 "0" V 10150 1500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 10080 1500 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 10150 1500 50  0001 C CNN
+F 4 "Yageo" H 250 0   50  0001 C CNN "Mfg"
+F 5 "RC0402FR-132K2L" H 250 0   50  0001 C CNN "MPN"
+F 6 "res-0402-2k2" H 10150 1500 50  0001 C CNN "1b2-bom-key"
+	1    10150 1500
+	0    -1   1    0   
+$EndComp
+Text Label -4800 5300 2    50   ~ 0
+SCL
+Text Label -4800 5500 2    50   ~ 0
+SDA
+Wire Wire Line
+	-4800 5500 -5000 5500
+Wire Wire Line
+	-5000 5300 -4800 5300
 $EndSCHEMATC
