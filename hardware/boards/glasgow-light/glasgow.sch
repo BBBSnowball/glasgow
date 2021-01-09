@@ -2574,7 +2574,7 @@ Wire Wire Line
 	-4750 3550 -5000 3550
 Wire Wire Line
 	-5000 3450 -4750 3450
-Text Label -2800 3350 2    50   ~ 0
+Text Label -2800 3050 2    50   ~ 0
 DA0
 Text Label -4750 2850 2    50   ~ 0
 ~SYNC
@@ -2625,7 +2625,7 @@ Text Label -2800 3450 2    50   ~ 0
 QA1
 Wire Wire Line
 	-3400 2550 -3400 2500
-Text Label -2800 3050 2    50   ~ 0
+Text Label -4800 3150 2    50   ~ 0
 DA1
 Text Label -2800 4250 2    50   ~ 0
 DA3
@@ -2635,7 +2635,7 @@ Text Label -2800 3650 2    50   ~ 0
 DA5
 Text Label -4800 4900 2    50   ~ 0
 DA6
-Text Label -4800 3150 2    50   ~ 0
+Text Label -2800 3350 2    50   ~ 0
 DA7
 Wire Wire Line
 	-3000 3050 -2800 3050
