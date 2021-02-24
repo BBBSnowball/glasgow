@@ -162,57 +162,130 @@ Build a RevC-light variant:
   - 1x ENA for 3V3 for FPGA
   - sum: 32
 
+  - This claims that BOOT0 is also connected to PA8. This seems to be the case for the dev board, at least
+    (although this connection is not present in the schematic). If the SoC has any connection between these
+    pins, this would be very relevant.
+    https://www.susa.net/wordpress/2019/10/longan-nano-gd32vf103/
+
   QFN48 - not complete for pins that have a fixed function already.
 
   TODO: 2x ENA, 1x ENA
 
-  | pin | name          | ADC | DAC | SPI  | UART   |     | TIMER | special  | used as?   |
-  |-----+---------------+-----+-----+------+--------+-----+-------+----------+------------|
-  |   1 | Vbat          |     |     |      |        |     |       | supply   | S          |
-  |   2 | PC13          |     |     |      |        |     |       | RTC      | !! free !! |
-  |   3 | OSC32IN/PC14  |     |     |      |        |     |       | RTC      | !! free !! |
-  |   4 | OSC32OUT/PC15 |     |     |      |        |     |       | RTC      | !! free !! |
-  |   5 | OSCIN         |     |     |      |        |     |       |          | OSC        |
-  |   6 | OSCOUT        |     |     |      |        |     |       |          | OSC        |
-  |   7 | NRST          |     |     |      |        |     |       | reset    | S          |
-  |   8 | VSSA          |     |     |      |        |     |       | supply   | S          |
-  |   9 | VDDA          |     |     |      |        |     |       | supply   | S          |
-  |  10 | PA0           |  01 |     |      |        |     |       |          | ADC        |
-  |  11 | PA1           |  01 |     |      |        |     |       |          | ADC        |
-  |  12 | PA2           |  01 |     |      | TX     |     |       |          | ADC, TX    |
-  |  13 | PA3           |  01 |     |      | RX     |     |       |          | ADC, RX    |
-  |  14 | PA4           |  01 |   0 | NSS  | CK     |     |       |          | DAC!       |
-  |  15 | PA5           |  01 |   1 | SCK  |        |     |       |          | DAC!       |
-  |  16 | PA6           |  01 |     | MISO |        |     |       |          | ADC        |
-  |  17 | PA7           |  01 |     | MOSI |        |     |       |          | ADC        |
-  |  18 | PB0           |  01 |     |      |        |     |       |          | ADC        |
-  |  19 | PB1           |  01 |     |      |        |     |       |          | ADC        |
-  |  20 | PB2           |     |     |      |        |     |       | BOOT1    | B (free)   |
-  |  21 | PB10          |     |     |      | TX     | SCL |     1 |          | I2C        |
-  |  22 | PB11          |     |     |      | RX     | SDA |     1 |          | I2C        |
-  |  23 | VSS           |     |     |      |        |     |       | supply   | S          |
-  |  24 | VDD           |     |     |      |        |     |       | supply   | S          |
-  |  25 | PB12          |     |     | NSS  | CK     |     |       |          | SPI        |
-  |  26 | PB13          |     |     | SCK  |        |     |     0 |          | SPI        |
-  |  27 | PB14          |     |     | MISO |        |     |     0 |          | SPI        |
-  |  28 | PB15          |     |     | MOSI |        |     |     0 |          | SPI        |
-  |  29 | PA8           |     |     |      | CK     |     |     0 |          | LED        |
-  |  30 | PA9           |     |     |      | TX, BL |     |     0 | USB_VBUS | USB        |
-  |  31 | PA10          |     |     |      | RX, BL |     |     0 | (USB_ID) | CLKOUT     |
-  |  32 | PA11          |     |     |      |        |     |     0 | USB D-   | USB        |
-  |  33 | PA12          |     |     |      |        |     |     0 | USB D+   | USB        |
-  |  34 | PA13          |     |     |      |        |     |       | JTAG     | JTAG MCU   |
-  |  35 | VSS           |     |     |      |        |     |       | supply   | S          |
-  |  36 | VDD           |     |     |      |        |     |       | supply   | S          |
-  |  37 | PA14          |     |     |      |        |     |       | JTAG     | JTAG MCU   |
-  |  38 | PA15          |     |     | NSS  |        |     |       | JTAG     | JTAG MCU   |
-  |  39 | PB3           |     |     | SCK  |        |     |       | JTAG     | JTAG MCU   |
-  |  40 | PB4           |     |     | MISO |        |     |       | (JTAG)   | (JTAG MCU) |
-  |  41 | PB5           |     |     | MOSI |        |     |     2 |          | JTAG FPGA  |
-  |  42 | PB6           |     |     |      | TX     | SCL |     3 |          | JTAG FPGA  |
-  |  43 | PB7           |     |     |      | RX     | SDA |     3 |          | JTAG FPGA  |
-  |  44 | BOOT0         |     |     |      |        |     |       | BOOT0    | S          |
-  |  45 | PB8           |     |     |      |        | SCL |     3 |          | JTAG FPGA  |
-  |  46 | PB9           |     |     |      |        | SDA |     3 |          | JTAG FPGA  |
-  |  47 | VSS           |     |     |      |        |     |       | supply   | S          |
-  |  48 | VDD           |     |     |      |        |     |       | supply   | S          |
+  | pin | name          | ADC | DAC | SPI  | UART   |     | TIMER | special           | used as?   |
+  |-----+---------------+-----+-----+------+--------+-----+-------+-------------------+------------|
+  |   1 | Vbat          |     |     |      |        |     |       | supply            | S          |
+  |   2 | PC13          |     |     |      |        |     |       | RTC               | !! free !! |
+  |   3 | OSC32IN/PC14  |     |     |      |        |     |       | RTC               | !! free !! |
+  |   4 | OSC32OUT/PC15 |     |     |      |        |     |       | RTC               | !! free !! |
+  |   5 | OSCIN         |     |     |      |        |     |       |                   | OSC        |
+  |   6 | OSCOUT        |     |     |      |        |     |       |                   | OSC        |
+  |   7 | NRST          |     |     |      |        |     |       | reset             | S          |
+  |   8 | VSSA          |     |     |      |        |     |       | supply            | S          |
+  |   9 | VDDA          |     |     |      |        |     |       | supply            | S          |
+  |  10 | PA0           |  01 |     |      |        |     |       |                   | ADC        |
+  |  11 | PA1           |  01 |     |      |        |     |       |                   | ADC        |
+  |  12 | PA2           |  01 |     |      | TX     |     |       |                   | ADC, TX    |
+  |  13 | PA3           |  01 |     |      | RX     |     |       |                   | ADC, RX    |
+  |  14 | PA4           |  01 |   0 | NSS  | CK     |     |       |                   | DAC!       |
+  |  15 | PA5           |  01 |   1 | SCK  |        |     |       |                   | DAC!       |
+  |  16 | PA6           |  01 |     | MISO |        |     |       |                   | ADC        |
+  |  17 | PA7           |  01 |     | MOSI |        |     |       |                   | ADC        |
+  |  18 | PB0           |  01 |     |      |        |     |       |                   | ADC        |
+  |  19 | PB1           |  01 |     |      |        |     |       |                   | ADC        |
+  |  20 | PB2           |     |     |      |        |     |       | BOOT1             | B (free)   |
+  |  21 | PB10          |     |     |      | TX     | SCL |     1 |                   | I2C        |
+  |  22 | PB11          |     |     |      | RX     | SDA |     1 |                   | I2C        |
+  |  23 | VSS           |     |     |      |        |     |       | supply            | S          |
+  |  24 | VDD           |     |     |      |        |     |       | supply            | S          |
+  |  25 | PB12          |     |     | NSS  | CK     |     |       |                   | SPI        |
+  |  26 | PB13          |     |     | SCK  |        |     |     0 |                   | SPI        |
+  |  27 | PB14          |     |     | MISO |        |     |     0 |                   | SPI        |
+  |  28 | PB15          |     |     | MOSI |        |     |     0 |                   | SPI        |
+  |  29 | PA8           |     |     |      | CK     |     |     0 | CK_OUT0, (BOOT0?) | CLKOUT     |
+  |  30 | PA9           |     |     |      | TX, BL |     |     0 | USB_VBUS          | USB        |
+  |  31 | PA10          |     |     |      | RX, BL |     |     0 | (USB_ID)          | LED        |
+  |  32 | PA11          |     |     |      |        |     |     0 | USB D-            | USB        |
+  |  33 | PA12          |     |     |      |        |     |     0 | USB D+            | USB        |
+  |  34 | PA13          |     |     |      |        |     |       | JTAG              | JTAG MCU   |
+  |  35 | VSS           |     |     |      |        |     |       | supply            | S          |
+  |  36 | VDD           |     |     |      |        |     |       | supply            | S          |
+  |  37 | PA14          |     |     |      |        |     |       | JTAG              | JTAG MCU   |
+  |  38 | PA15          |     |     | NSS  |        |     |       | JTAG              | JTAG MCU   |
+  |  39 | PB3           |     |     | SCK  |        |     |       | JTAG              | JTAG MCU   |
+  |  40 | PB4           |     |     | MISO |        |     |       | (JTAG)            | (JTAG MCU) |
+  |  41 | PB5           |     |     | MOSI |        |     |     2 |                   | JTAG FPGA  |
+  |  42 | PB6           |     |     |      | TX     | SCL |     3 |                   | JTAG FPGA  |
+  |  43 | PB7           |     |     |      | RX     | SDA |     3 |                   | JTAG FPGA  |
+  |  44 | BOOT0         |     |     |      |        |     |       | BOOT0             | S          |
+  |  45 | PB8           |     |     |      |        | SCL |     3 |                   | JTAG FPGA  |
+  |  46 | PB9           |     |     |      |        | SDA |     3 |                   | JTAG FPGA  |
+  |  47 | VSS           |     |     |      |        |     |       | supply            | S          |
+  |  48 | VDD           |     |     |      |        |     |       | supply            | S          |
+
+GD32VF103TBU6, QFN36
+  |  pin | name   | ADC | DAC | SPI  | UART   |     | TIMER | special           | used as?        |
+  |------+--------+-----+-----+------+--------+-----+-------+-------------------+-----------------|
+  |    2 | OSCIN  |     |     |      |        |     |       |                   | OSC             |
+  |    3 | OSCOUT |     |     |      |        |     |       |                   | OSC             |
+  |    4 | NRST   |     |     |      |        |     |       | reset             | S               |
+  |    5 | VSSA   |     |     |      |        |     |       | supply            | S               |
+  |    6 | VDDA   |     |     |      |        |     |       | supply            | S               |
+  |    7 | PA0    |  01 |     |      |        |     |       |                   | ADC             |
+  |    8 | PA1    |  01 |     |      |        |     |       |                   | ADC             |
+  |    9 | PA2    |  01 |     |      | TX     |     |       |                   | ADC, TX         |
+  |   10 | PA3    |  01 |     |      | RX     |     |       |                   | ADC, RX         |
+  |   11 | PA4    |  01 |   0 | NSS  | CK     |     |       |                   | DAC!            |
+  |   12 | PA5    |  01 |   1 | SCK  |        |     |       |                   | DAC! ((-> SPI)) |
+  |   13 | PA6    |  01 |     | MISO |        |     |       |                   | ADC             |
+  |   14 | PA7    |  01 |     | MOSI |        |     |       |                   | ADC             |
+  |   15 | PB0    |  01 |     |      |        |     |       |                   | ADC             |
+  |   16 | PB1    |  01 |     |      |        |     |       |                   | ADC             |
+  |   17 | PB2    |     |     |      |        |     |       | BOOT1             | B (free)        |
+  |   18 | VSS    |     |     |      |        |     |       | supply            | S               |
+  |   19 | VDD    |     |     |      |        |     |       | supply            | S               |
+  |   20 | PA8    |     |     |      | CK     |     |     0 | CK_OUT0, (BOOT0?) | CLKOUT          |
+  |   21 | PA9    |     |     |      | TX, BL |     |     0 | USB_VBUS          | USB             |
+  |   22 | PA10   |     |     |      | RX, BL |     |     0 | (USB_ID)          | LED             |
+  |   23 | PA11   |     |     |      |        |     |     0 | USB D-            | USB             |
+  |   24 | PA12   |     |     |      |        |     |     0 | USB D+            | USB             |
+  |   25 | PA13   |     |     |      |        |     |       | JTAG              | JTAG MCU        |
+  |   26 | VSS    |     |     |      |        |     |       | supply            | S               |
+  |   27 | VDD    |     |     |      |        |     |       | supply            | S               |
+  |   28 | PA14   |     |     |      |        |     |       | JTAG              | JTAG MCU        |
+  |   29 | PA15   |     |     | NSS  |        |     |       | JTAG              | JTAG MCU -> SPI |
+  |   32 | PB3    |     |     | SCK  |        |     |       | JTAG              | JTAG MCU -> SPI |
+  |   31 | PB4    |     |     | MISO |        |     |       | (JTAG)            | (JTAG) -> SPI   |
+  |   32 | PB5    |     |     | MOSI |        |     |     2 |                   | SPI             |
+  |   33 | PB6    |     |     |      | TX     | SCL |     3 |                   | I2C             |
+  |   34 | PB7    |     |     |      | RX     | SDA |     3 |                   | I2C             |
+  |   35 | BOOT0  |     |     |      |        |     |       | BOOT0             | S               |
+  |   36 | VSS    |     |     |      |        |     |       | supply            | S               |
+  |    1 | VDD    |     |     |      |        |     |       | supply            | S               |
+
+missing:
+- Vbat, RTC -> ok
+- PB10..PB15 -> relocate I2C and SPI
+- PB8..PB9 -> JTAG FPGA -> FPGA doesn't have JTAG anyway
+- SPI is a problem:
+  - The USARTs can speak SPI but very slowly.
+  - NSS and SCK are only available on PA4/5 and PA15/PB3. We need those for DAC and JTAG.
+  - MISO and MOSI are available on PB4/5. MISO clashes with an optional JTAG pin.
+  - We only need one DAC so SCK can use PA5. This means that one channel is using the ADC
+    or we have to disable SPI while measuring it.
+
+  - Can we mix and match SPI mappings from differen positions?
+    - http://www.gd32mcu.com/data/documents/shujushouce/GD32VF103_User_Manual_EN_V1.2.pdf, section 7.4.7, SPI0 AF remapping
+    - It looks like this is one bit for remapping it, i.e. not possible.
+    - How does this work for the third SPI position on LQFP48? -> That is for SPI1.
+  - Can we use an arbitrary pin for NSS? -> doesn't matter because of ^^
+- I'm only loosing JTAG for the MCU and "only" if SPI is used.
+  - This is ok-ish. I can disable SPI during debug and I hope that I won't have to debug
+    the SPI too much.
+  - We can put the QFN-48 on the bottom or nest the footprints - at least we can try that.
+
+TODO:
+- //add solder jumper for analog function of PA5 (we cut this in case SCK has a negative impact
+  on the digital function of that pin or vice versa)
+- add 100R to PB4 in case programmer and FPGA are both driving it
+  -> for PA15 and PB3, as well; to JTAG and to FPGA
+- add test points for all SPI signals and I2C (in case we want to connect a LQFP-48 board for debugging)
