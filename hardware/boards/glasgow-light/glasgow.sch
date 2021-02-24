@@ -2149,7 +2149,7 @@ L Device:R R9
 U 1 1 616E008C
 P 3000 -2600
 F 0 "R9" V 2900 -2600 50  0000 C CNN
-F 1 "15k" V 3000 -2600 50  0000 C CNN
+F 1 "10k" V 3000 -2600 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 2930 -2600 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 3000 -2600 50  0001 C CNN
 F 4 "Yageo" H -1400 -7900 50  0001 C CNN "Mfg"
@@ -2367,7 +2367,7 @@ Text GLabel -400 -2800 2    50   Input ~ 0
 FPGA_MISO
 Text GLabel -400 -2650 2    50   Input ~ 0
 FPGA_MOSI
-Text Label -150 -2500 0    50   ~ 0
+Text Label -200 -2200 2    50   ~ 0
 LED_ACT
 Wire Wire Line
 	-550 -2500 150  -2500
@@ -2482,28 +2482,10 @@ Wire Wire Line
 Wire Wire Line
 	4300 -5550 4400 -5550
 Wire Wire Line
-	4300 -4800 4600 -4800
-Wire Wire Line
-	4300 -4650 4600 -4650
-Wire Wire Line
-	4300 -4500 4600 -4500
-Wire Wire Line
-	4300 -4200 4600 -4200
-Wire Wire Line
-	4300 -4050 4600 -4050
-Text Label 4350 -4800 0    50   ~ 0
-FPGA_JTAG1
-Text Label 4350 -4650 0    50   ~ 0
-FPGA_JTAG2
-Text Label 4350 -4500 0    50   ~ 0
-FPGA_JTAG3
-Text Label 4350 -4200 0    50   ~ 0
-FPGA_JTAG4
-Text Label 4350 -4050 0    50   ~ 0
-FPGA_JTAG5
+	4300 -4800 4800 -4800
 Text Notes 50   -2900 0    50   ~ 0
 CLKIF
-Text Label -500 -2200 0    50   ~ 0
+Text Label 150  -2500 2    50   ~ 0
 CLKREF
 Wire Wire Line
 	-550 -2200 -200 -2200
@@ -2893,4 +2875,10 @@ Wire Wire Line
 	-4800 5500 -5000 5500
 Wire Wire Line
 	-5000 5300 -4800 5300
+Wire Wire Line
+	4300 -4650 4800 -4650
+Text Label 4800 -4800 2    50   ~ 0
+~FPGA_RESET
+Text Label 4800 -4650 2    50   ~ 0
+FPGA_DONE
 $EndSCHEMATC
