@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:glasgow-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -1494,7 +1495,7 @@ Wire Wire Line
 NoConn ~ 1500 5450
 NoConn ~ 1500 5550
 $Comp
-L Connector:USB_C_Receptacle_USB2.0 J1
+L glasgow-rescue:USB_C_Receptacle_USB2.0-Connector J1
 U 1 1 5ED2E76F
 P 900 4950
 F 0 "J1" H 550 5700 50  0000 C CNN
