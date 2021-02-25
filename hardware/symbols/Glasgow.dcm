@@ -6,6 +6,10 @@ K I2C Cryprography Authentication
 F http://ww1.microchip.com/downloads/en/DeviceDoc/20005927A.pdf
 $ENDCMP
 #
+$CMP GD32VF103T
+F http://www.gd32mcu.com/data/documents/shujushouce/GD32VF103_Datasheet_Rev_1.3.pdf
+$ENDCMP
+#
 $CMP MG2040
 D Low Capacitance ESD Protection for High Speed Video Interface
 K ESD Protection diodes transient suppressor

@@ -2882,4 +2882,228 @@ Text Label 4800 -4800 2    50   ~ 0
 ~FPGA_RESET
 Text Label 4800 -4650 2    50   ~ 0
 FPGA_DONE
+$Comp
+L Glasgow:GD32VF103T U?
+U 1 1 603FF9FD
+P 6900 -6200
+F 0 "U?" H 6842 -5435 50  0000 C CNN
+F 1 "GD32VF103T" H 6842 -5526 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP4.1x4.1mm" H 6900 -6200 50  0001 C CNN
+F 3 "http://www.gd32mcu.com/data/documents/shujushouce/GD32VF103_Datasheet_Rev_1.3.pdf" H 6900 -6200 50  0001 C CNN
+	1    6900 -6200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Glasgow:GD32VF103T U?
+U 2 1 6040456B
+P 6900 -4600
+F 0 "U?" H 6842 -3835 50  0000 C CNN
+F 1 "GD32VF103T" H 6842 -3926 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP4.1x4.1mm" H 6900 -4600 50  0001 C CNN
+F 3 "http://www.gd32mcu.com/data/documents/shujushouce/GD32VF103_Datasheet_Rev_1.3.pdf" H 6900 -4600 50  0001 C CNN
+	2    6900 -4600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Glasgow:GD32VF103T U?
+U 3 1 604078AB
+P 6850 -3000
+F 0 "U?" H 6767 -2135 50  0000 C CNN
+F 1 "GD32VF103T" H 6767 -2226 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP4.1x4.1mm" H 6850 -3000 50  0001 C CNN
+F 3 "http://www.gd32mcu.com/data/documents/shujushouce/GD32VF103_Datasheet_Rev_1.3.pdf" H 6850 -3000 50  0001 C CNN
+	3    6850 -3000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Glasgow:GD32VF103T U?
+U 4 1 60409FF5
+P 6950 -1350
+F 0 "U?" H 6900 -485 50  0000 C CNN
+F 1 "GD32VF103T" H 6900 -576 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP4.1x4.1mm" H 6950 -1350 50  0001 C CNN
+F 3 "http://www.gd32mcu.com/data/documents/shujushouce/GD32VF103_Datasheet_Rev_1.3.pdf" H 6950 -1350 50  0001 C CNN
+	4    6950 -1350
+	1    0    0    -1  
+$EndComp
+Text Label 7550 -2550 2    50   ~ 0
+SDA
+Text Label 7550 -2700 2    50   ~ 0
+SCL
+Wire Wire Line
+	7300 -4200 7550 -4200
+Text Label 7350 -4200 0    50   ~ 0
+USB_N
+Wire Wire Line
+	7300 -4050 7550 -4050
+Text Label 7350 -4050 0    50   ~ 0
+USB_P
+Wire Wire Line
+	7300 -4500 7550 -4500
+$Comp
+L power:+5V #PWR?
+U 1 1 6040CC09
+P 7550 -4500
+F 0 "#PWR?" H 7550 -4650 50  0001 C CNN
+F 1 "+5V" H 7400 -4450 50  0000 C CNN
+F 2 "" H 7550 -4500 50  0001 C CNN
+F 3 "" H 7550 -4500 50  0001 C CNN
+	1    7550 -4500
+	0    1    1    0   
+$EndComp
+Text GLabel 7400 -6700 2    50   Input ~ 0
+ADC0
+Text GLabel 7400 -6550 2    50   Input ~ 0
+ADC1
+Text GLabel 7400 -6400 2    50   Input ~ 0
+ADC2
+Text GLabel 7400 -6250 2    50   Input ~ 0
+ADC3
+Text GLabel 7400 -5800 2    50   Input ~ 0
+ADC4
+Text GLabel 7400 -5650 2    50   Input ~ 0
+ADC5
+Text GLabel 7450 -4950 2    50   Input ~ 0
+VIO_CURRENT
+Text GLabel 7450 -5100 2    50   Input ~ 0
+ADC6
+Text GLabel 7450 -3300 2    50   Input ~ 0
+FPGA_CS
+Text GLabel 7450 -3150 2    50   Input ~ 0
+FPGA_SCK
+Text GLabel 7450 -3000 2    50   Input ~ 0
+FPGA_MISO
+Text GLabel 7450 -2850 2    50   Input ~ 0
+FPGA_MOSI
+Text Label 7650 -4350 2    50   ~ 0
+LED_ACT
+Wire Wire Line
+	7300 -4650 8000 -4650
+Wire Wire Line
+	7450 -2850 7300 -2850
+Wire Wire Line
+	7300 -3000 7450 -3000
+Wire Wire Line
+	7450 -3150 7300 -3150
+Wire Wire Line
+	7300 -3300 7450 -3300
+Wire Wire Line
+	7300 -4950 7450 -4950
+Wire Wire Line
+	7300 -5100 7450 -5100
+Text GLabel 7450 -4800 2    50   Input ~ 0
+VIO_ENA
+Text Notes 7900 -4750 0    50   ~ 0
+PB2 is also BOOT1, which should be low during startup
+Wire Wire Line
+	7400 -5650 7300 -5650
+Wire Wire Line
+	7300 -5800 7400 -5800
+Wire Wire Line
+	7300 -6250 7400 -6250
+Wire Wire Line
+	7300 -6400 7400 -6400
+Wire Wire Line
+	7300 -6550 7400 -6550
+Wire Wire Line
+	7300 -6700 7400 -6700
+Text GLabel 7400 -5950 2    50   Input ~ 0
+ADC7
+Wire Wire Line
+	7400 -5950 7300 -5950
+Wire Wire Line
+	7300 -6100 7400 -6100
+Text GLabel 7400 -6100 2    50   Input ~ 0
+VIO_DAC
+Text Label 8000 -4650 2    50   ~ 0
+CLKREF
+Wire Wire Line
+	7300 -4350 7650 -4350
+Wire Wire Line
+	7300 -4800 7450 -4800
+Text Label 4400 -3500 1    50   ~ 0
+VDDA
+Text Label 7650 -1950 2    50   ~ 0
+VDDA
+Wire Wire Line
+	7650 -1950 7350 -1950
+Text Label 6100 -1500 0    50   ~ 0
+XTALOUT
+Text Label 6100 -1350 0    50   ~ 0
+XTALIN
+Wire Wire Line
+	6100 -1350 6450 -1350
+Wire Wire Line
+	6450 -1500 6100 -1500
+Text Label 3250 -2600 0    50   ~ 0
+NRST
+Text Label 6100 -1200 0    50   ~ 0
+NRST
+Wire Wire Line
+	6100 -1200 6450 -1200
+$Comp
+L power:GND #PWR?
+U 1 1 605BF48B
+P 7500 -900
+F 0 "#PWR?" H 7500 -1150 50  0001 C CNN
+F 1 "GND" H 7505 -1073 50  0000 C CNN
+F 2 "" H 7500 -900 50  0001 C CNN
+F 3 "" H 7500 -900 50  0001 C CNN
+	1    7500 -900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 605BF9C6
+P 7500 -1800
+F 0 "#PWR?" H 7500 -1950 50  0001 C CNN
+F 1 "+3.3V" H 7515 -1627 50  0000 C CNN
+F 2 "" H 7500 -1800 50  0001 C CNN
+F 3 "" H 7500 -1800 50  0001 C CNN
+	1    7500 -1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7350 -1800 7400 -1800
+Wire Wire Line
+	7400 -1800 7400 -1650
+Wire Wire Line
+	7400 -1500 7350 -1500
+Connection ~ 7400 -1800
+Wire Wire Line
+	7400 -1800 7500 -1800
+Wire Wire Line
+	7350 -1650 7400 -1650
+Connection ~ 7400 -1650
+Wire Wire Line
+	7400 -1650 7400 -1500
+Wire Wire Line
+	7350 -1350 7400 -1350
+Wire Wire Line
+	7400 -1350 7400 -1200
+Wire Wire Line
+	7400 -900 7350 -900
+Wire Wire Line
+	7350 -1050 7400 -1050
+Connection ~ 7400 -1050
+Wire Wire Line
+	7400 -1050 7400 -900
+Wire Wire Line
+	7350 -1200 7400 -1200
+Connection ~ 7400 -1200
+Wire Wire Line
+	7400 -1200 7400 -1050
+Wire Wire Line
+	7400 -900 7500 -900
+Connection ~ 7400 -900
+Wire Wire Line
+	7550 -2550 7300 -2550
+Wire Wire Line
+	7300 -2700 7550 -2700
+Text Label 4350 -4350 0    50   ~ 0
+BOOT0
+Text Label 7600 -2400 2    50   ~ 0
+BOOT0
+Wire Wire Line
+	7600 -2400 7300 -2400
 $EndSCHEMATC
