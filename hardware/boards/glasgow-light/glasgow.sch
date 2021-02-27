@@ -151,40 +151,12 @@ F 3 "" H 600 6600 50  0001 C CNN
 	1    600  6600
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C C2
-U 1 1 5ACD6C50
-P 1400 1150
-F 0 "C2" H 1515 1196 50  0000 L CNN
-F 1 "u1" H 1515 1105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 1438 1000 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/396/mlcc02_e-1307760.pdf" H 1400 1150 50  0001 C CNN
-F 4 "Taiyo Yuden" H -450 -250 50  0001 C CNN "Mfg"
-F 5 "TMK105BJ104KV-F" H -450 -250 50  0001 C CNN "MPN"
-F 6 "cap-cer-0402-100n" H 1400 1150 50  0001 C CNN "1b2-bom-key"
-	1    1400 1150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1400 1000 1400 950 
 Wire Wire Line
 	1400 950  1700 950 
 Wire Wire Line
-	3200 950  3200 1000
-Wire Wire Line
-	2900 950  2900 1000
-Connection ~ 2900 950 
-Wire Wire Line
-	2600 950  2600 1000
-Connection ~ 2600 950 
-Wire Wire Line
-	2300 950  2300 1000
-Connection ~ 2300 950 
-Wire Wire Line
-	2300 950  2600 950 
-Wire Wire Line
 	2000 950  2000 1000
-Connection ~ 2000 950 
 Wire Wire Line
 	1700 950  1700 1000
 Connection ~ 1700 950 
@@ -195,38 +167,12 @@ Wire Wire Line
 Wire Wire Line
 	1400 1350 1700 1350
 Wire Wire Line
-	3200 1350 3200 1300
-Wire Wire Line
 	1700 1300 1700 1350
 Connection ~ 1700 1350
 Wire Wire Line
 	1700 1350 2000 1350
 Wire Wire Line
 	2000 1300 2000 1350
-Connection ~ 2000 1350
-Wire Wire Line
-	2300 1300 2300 1350
-Connection ~ 2300 1350
-Wire Wire Line
-	2600 1300 2600 1350
-Connection ~ 2600 1350
-Wire Wire Line
-	2900 1300 2900 1350
-Connection ~ 2900 1350
-$Comp
-L Device:C C1
-U 1 1 5ACF0AA9
-P 1000 1150
-F 0 "C1" H 1115 1196 50  0000 L CNN
-F 1 "4u7" H 1115 1105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 1038 1000 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/400/lcc_commercial_general_en-837201.pdf" H 1000 1150 50  0001 C CNN
-F 4 "Taiyo Yuden" H -450 -250 50  0001 C CNN "Mfg"
-F 5 "LMK107BJ475KAHT" H -450 -250 50  0001 C CNN "MPN"
-F 6 "cap-cer-0603-4u7" H 1000 1150 50  0001 C CNN "1b2-bom-key"
-	1    1000 1150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1400 950  1000 950 
 Wire Wire Line
@@ -237,90 +183,6 @@ Wire Wire Line
 Wire Wire Line
 	1000 1350 1000 1300
 Connection ~ 1400 1350
-$Comp
-L Device:C C3
-U 1 1 5ACF711C
-P 1700 1150
-F 0 "C3" H 1815 1196 50  0000 L CNN
-F 1 "u1" H 1815 1105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 1738 1000 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/396/mlcc02_e-1307760.pdf" H 1700 1150 50  0001 C CNN
-F 4 "Taiyo Yuden" H -450 -250 50  0001 C CNN "Mfg"
-F 5 "TMK105BJ104KV-F" H -450 -250 50  0001 C CNN "MPN"
-F 6 "cap-cer-0402-100n" H 1700 1150 50  0001 C CNN "1b2-bom-key"
-	1    1700 1150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C4
-U 1 1 5ACF7152
-P 2000 1150
-F 0 "C4" H 2115 1196 50  0000 L CNN
-F 1 "u1" H 2115 1105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 2038 1000 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/396/mlcc02_e-1307760.pdf" H 2000 1150 50  0001 C CNN
-F 4 "Taiyo Yuden" H -450 -250 50  0001 C CNN "Mfg"
-F 5 "TMK105BJ104KV-F" H -450 -250 50  0001 C CNN "MPN"
-F 6 "cap-cer-0402-100n" H 2000 1150 50  0001 C CNN "1b2-bom-key"
-	1    2000 1150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C5
-U 1 1 5ACF7188
-P 2300 1150
-F 0 "C5" H 2415 1196 50  0000 L CNN
-F 1 "u1" H 2415 1105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 2338 1000 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/396/mlcc02_e-1307760.pdf" H 2300 1150 50  0001 C CNN
-F 4 "Taiyo Yuden" H -450 -250 50  0001 C CNN "Mfg"
-F 5 "TMK105BJ104KV-F" H -450 -250 50  0001 C CNN "MPN"
-F 6 "cap-cer-0402-100n" H 2300 1150 50  0001 C CNN "1b2-bom-key"
-	1    2300 1150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C6
-U 1 1 5ACF71C9
-P 2600 1150
-F 0 "C6" H 2715 1196 50  0000 L CNN
-F 1 "u1" H 2715 1105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 2638 1000 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/396/mlcc02_e-1307760.pdf" H 2600 1150 50  0001 C CNN
-F 4 "Taiyo Yuden" H -450 -250 50  0001 C CNN "Mfg"
-F 5 "TMK105BJ104KV-F" H -450 -250 50  0001 C CNN "MPN"
-F 6 "cap-cer-0402-100n" H 2600 1150 50  0001 C CNN "1b2-bom-key"
-	1    2600 1150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C7
-U 1 1 5ACF720B
-P 2900 1150
-F 0 "C7" H 3015 1196 50  0000 L CNN
-F 1 "u1" H 3015 1105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 2938 1000 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/396/mlcc02_e-1307760.pdf" H 2900 1150 50  0001 C CNN
-F 4 "Taiyo Yuden" H -450 -250 50  0001 C CNN "Mfg"
-F 5 "TMK105BJ104KV-F" H -450 -250 50  0001 C CNN "MPN"
-F 6 "cap-cer-0402-100n" H 2900 1150 50  0001 C CNN "1b2-bom-key"
-	1    2900 1150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C9
-U 1 1 5ACF72A1
-P 3200 1150
-F 0 "C9" H 3315 1196 50  0000 L CNN
-F 1 "u1" H 3315 1105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 3238 1000 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/396/mlcc02_e-1307760.pdf" H 3200 1150 50  0001 C CNN
-F 4 "Taiyo Yuden" H -450 -250 50  0001 C CNN "Mfg"
-F 5 "TMK105BJ104KV-F" H -450 -250 50  0001 C CNN "MPN"
-F 6 "cap-cer-0402-100n" H 3200 1150 50  0001 C CNN "1b2-bom-key"
-	1    3200 1150
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C C13
 U 1 1 5ACF7322
@@ -375,109 +237,11 @@ F 6 "cap-cer-0402-9p" H 4100 -1150 50  0001 C CNN "1b2-bom-key"
 	1    4100 -1150
 	0    1    1    0   
 $EndComp
-$Comp
-L Mechanical:MountingHole_Pad MK1
-U 1 1 5AD602A3
-P 600 7350
-F 0 "MK1" H 550 7550 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" H 700 7310 50  0001 L CNN
-F 2 "Glasgow:MountingHole_3.5mm_Pad_Via_CrtYd" H 600 7350 50  0001 C CNN
-F 3 "" H 600 7350 50  0001 C CNN
-	1    600  7350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole_Pad MK2
-U 1 1 5AD64D62
-P 800 7350
-F 0 "MK2" H 750 7550 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" H 900 7310 50  0001 L CNN
-F 2 "Glasgow:MountingHole_3.5mm_Pad_Via_CrtYd" H 800 7350 50  0001 C CNN
-F 3 "" H 800 7350 50  0001 C CNN
-	1    800  7350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole_Pad MK3
-U 1 1 5AD64DAE
-P 1000 7350
-F 0 "MK3" H 950 7550 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" H 1100 7310 50  0001 L CNN
-F 2 "Glasgow:MountingHole_3.5mm_Pad_Via_CrtYd" H 1000 7350 50  0001 C CNN
-F 3 "" H 1000 7350 50  0001 C CNN
-	1    1000 7350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole_Pad MK4
-U 1 1 5AD64E04
-P 1200 7350
-F 0 "MK4" H 1150 7550 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" H 1300 7310 50  0001 L CNN
-F 2 "Glasgow:MountingHole_3.5mm_Pad_Via_CrtYd" H 1200 7350 50  0001 C CNN
-F 3 "" H 1200 7350 50  0001 C CNN
-	1    1200 7350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	600  7450 600  7500
-Wire Wire Line
-	600  7500 800  7500
-Wire Wire Line
-	800  7500 800  7450
-Wire Wire Line
-	800  7500 1000 7500
-Wire Wire Line
-	1000 7500 1000 7450
-Connection ~ 800  7500
-Wire Wire Line
-	1000 7500 1200 7500
-Wire Wire Line
-	1200 7500 1200 7450
-Connection ~ 1000 7500
-$Comp
-L power:GND #PWR023
-U 1 1 5AD7524E
-P 600 7550
-F 0 "#PWR023" H 600 7300 50  0001 C CNN
-F 1 "GND" H 605 7377 50  0000 C CNN
-F 2 "" H 600 7550 50  0001 C CNN
-F 3 "" H 600 7550 50  0001 C CNN
-	1    600  7550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	600  7500 600  7550
-Connection ~ 600  7500
 Wire Wire Line
 	600  6550 950  6550
 Wire Wire Line
 	600  6550 600  6600
 Connection ~ 600  6550
-$Comp
-L Device:C C10
-U 1 1 5AD97C38
-P 3500 1150
-F 0 "C10" H 3615 1196 50  0000 L CNN
-F 1 "u1" H 3615 1105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 3538 1000 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/396/mlcc02_e-1307760.pdf" H 3500 1150 50  0001 C CNN
-F 4 "Taiyo Yuden" H -450 -250 50  0001 C CNN "Mfg"
-F 5 "TMK105BJ104KV-F" H -450 -250 50  0001 C CNN "MPN"
-F 6 "cap-cer-0402-100n" H 3500 1150 50  0001 C CNN "1b2-bom-key"
-	1    3500 1150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3500 1000 3500 950 
-Wire Wire Line
-	3500 950  3200 950 
-Connection ~ 3200 950 
-Wire Wire Line
-	3500 1300 3500 1350
-Wire Wire Line
-	3500 1350 3200 1350
-Connection ~ 3200 1350
 Text Label 800  6150 0    50   ~ 0
 SHLD
 Text Label 2450 4150 0    50   ~ 0
@@ -787,15 +551,15 @@ Connection ~ 10350 5700
 $Comp
 L Device:LED D1
 U 1 1 5B095C2B
-P 9800 900
-F 0 "D1" H 9500 900 50  0000 C CNN
-F 1 "GRN" H 9350 900 50  0000 C CNN
-F 2 "LED_SMD:LED_0603_1608Metric" H 9800 900 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/445/150060GS75000-368921.pdf" H 9800 900 50  0001 C CNN
-F 4 "Wurth Electronics" H -450 0   50  0001 C CNN "Mfg"
-F 5 "150060GS75000" H -450 0   50  0001 C CNN "MPN"
-F 6 "led-0603-grn" H 9800 900 50  0001 C CNN "1b2-bom-key"
-	1    9800 900 
+P 9450 900
+F 0 "D1" H 9450 800 50  0000 C CNN
+F 1 "GRN" H 9300 950 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 9450 900 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/445/150060GS75000-368921.pdf" H 9450 900 50  0001 C CNN
+F 4 "Wurth Electronics" H -800 0   50  0001 C CNN "Mfg"
+F 5 "150060GS75000" H -800 0   50  0001 C CNN "MPN"
+F 6 "led-0603-grn" H 9450 900 50  0001 C CNN "1b2-bom-key"
+	1    9450 900 
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -830,15 +594,15 @@ Wire Wire Line
 $Comp
 L Device:R R12
 U 1 1 5B18B70C
-P 9450 900
-F 0 "R12" V 9350 900 50  0000 C CNN
-F 1 "20k" V 9450 900 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 9380 900 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 9450 900 50  0001 C CNN
-F 4 "Yageo" H -450 0   50  0001 C CNN "Mfg"
-F 5 "RC0402FR-1320KL" H -450 0   50  0001 C CNN "MPN"
-F 6 "res-0402-20k" H 9450 900 50  0001 C CNN "1b2-bom-key"
-	1    9450 900 
+P 9800 900
+F 0 "R12" V 9700 900 50  0000 C CNN
+F 1 "20k" V 9800 900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 9730 900 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 9800 900 50  0001 C CNN
+F 4 "Yageo" H -100 0   50  0001 C CNN "Mfg"
+F 5 "RC0402FR-1320KL" H -100 0   50  0001 C CNN "MPN"
+F 6 "res-0402-20k" H 9800 900 50  0001 C CNN "1b2-bom-key"
+	1    9800 900 
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
@@ -899,14 +663,6 @@ Wire Wire Line
 	6750 -2700 6750 -2500
 Wire Wire Line
 	6850 -2500 6850 -2550
-Wire Wire Line
-	2900 950  3200 950 
-Wire Wire Line
-	2900 1350 3200 1350
-Wire Wire Line
-	2600 950  2900 950 
-Wire Wire Line
-	2600 1350 2900 1350
 $Comp
 L Device:Crystal_GND24 Y1
 U 1 1 5ACC4BC0
@@ -1066,12 +822,6 @@ Text Notes 4100 900  0    50   ~ 0
 FPGA 3V3 decoupling
 Text Notes 5650 900  0    50   ~ 0
 FPGA 1V2 decoupling
-Wire Wire Line
-	2000 950  2300 950 
-Wire Wire Line
-	2000 1350 2300 1350
-Wire Wire Line
-	2300 1350 2600 1350
 Wire Wire Line
 	4750 1350 5100 1350
 Wire Wire Line
@@ -2271,21 +2021,21 @@ F 3 "" H 2650 -1600 50  0001 C CNN
 	1    2650 -1600
 	0    -1   -1   0   
 $EndComp
-Text GLabel 2300 -3450 2    50   Input ~ 0
-ADC0
-Text GLabel 2300 -3300 2    50   Input ~ 0
-ADC1
-Text GLabel 2300 -3150 2    50   Input ~ 0
-ADC2
-Text GLabel 2300 -3000 2    50   Input ~ 0
-ADC3
-Text GLabel 2300 -2550 2    50   Input ~ 0
-ADC4
-Text GLabel 2300 -2400 2    50   Input ~ 0
-ADC5
 Text GLabel 2300 -1750 2    50   Input ~ 0
-VIO_CURRENT
+ADC0
 Text GLabel 2300 -1900 2    50   Input ~ 0
+ADC1
+Text GLabel 2300 -2400 2    50   Input ~ 0
+ADC2
+Text GLabel 2300 -2550 2    50   Input ~ 0
+ADC3
+Text GLabel 2300 -2700 2    50   Input ~ 0
+ADC4
+Text GLabel 2300 -3000 2    50   Input ~ 0
+ADC5
+Text GLabel 2300 -3450 2    50   Input ~ 0
+VIO_CURRENT
+Text GLabel 2300 -3150 2    50   Input ~ 0
 ADC6
 Wire Wire Line
 	5800 -2700 6750 -2700
@@ -2322,7 +2072,7 @@ Wire Wire Line
 	2200 -3300 2300 -3300
 Wire Wire Line
 	2200 -3450 2300 -3450
-Text GLabel 2300 -2700 2    50   Input ~ 0
+Text GLabel 2300 -3300 2    50   Input ~ 0
 ADC7
 Wire Wire Line
 	2300 -2700 2200 -2700
@@ -2907,5 +2657,90 @@ F 2 "TestPoint:TestPoint_Pad_D1.0mm" H -4550 2850 50  0001 C CNN
 F 3 "~" H -4550 2850 50  0001 C CNN
 	1    -4750 2850
 	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C15
+U 1 1 610429BC
+P 6600 -1200
+F 0 "C15" H 6715 -1154 50  0000 L CNN
+F 1 "u1" H 6715 -1245 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6638 -1350 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/396/mlcc02_e-1307760.pdf" H 6600 -1200 50  0001 C CNN
+F 4 "Taiyo Yuden" H 1500 -2600 50  0001 C CNN "Mfg"
+F 5 "TMK105BJ104KV-F" H 1500 -2600 50  0001 C CNN "MPN"
+F 6 "cap-cer-0402-100n" H 6600 -1200 50  0001 C CNN "1b2-bom-key"
+	1    6600 -1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0116
+U 1 1 61042E8E
+P 6600 -1050
+F 0 "#PWR0116" H 6600 -1300 50  0001 C CNN
+F 1 "GND" H 6605 -1223 50  0000 C CNN
+F 2 "" H 6600 -1050 50  0001 C CNN
+F 3 "" H 6600 -1050 50  0001 C CNN
+	1    6600 -1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 -1350 6600 -1550
+Text Label 6600 -1550 3    50   ~ 0
+VDDA
+$Comp
+L Device:C C4
+U 1 1 5ACF7152
+P 2000 1150
+F 0 "C4" H 2115 1196 50  0000 L CNN
+F 1 "u1" H 2115 1105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2038 1000 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/396/mlcc02_e-1307760.pdf" H 2000 1150 50  0001 C CNN
+F 4 "Taiyo Yuden" H -450 -250 50  0001 C CNN "Mfg"
+F 5 "TMK105BJ104KV-F" H -450 -250 50  0001 C CNN "MPN"
+F 6 "cap-cer-0402-100n" H 2000 1150 50  0001 C CNN "1b2-bom-key"
+	1    2000 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5ACF711C
+P 1700 1150
+F 0 "C3" H 1815 1196 50  0000 L CNN
+F 1 "u1" H 1815 1105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1738 1000 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/396/mlcc02_e-1307760.pdf" H 1700 1150 50  0001 C CNN
+F 4 "Taiyo Yuden" H -450 -250 50  0001 C CNN "Mfg"
+F 5 "TMK105BJ104KV-F" H -450 -250 50  0001 C CNN "MPN"
+F 6 "cap-cer-0402-100n" H 1700 1150 50  0001 C CNN "1b2-bom-key"
+	1    1700 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5ACD6C50
+P 1400 1150
+F 0 "C2" H 1515 1196 50  0000 L CNN
+F 1 "u1" H 1515 1105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1438 1000 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/396/mlcc02_e-1307760.pdf" H 1400 1150 50  0001 C CNN
+F 4 "Taiyo Yuden" H -450 -250 50  0001 C CNN "Mfg"
+F 5 "TMK105BJ104KV-F" H -450 -250 50  0001 C CNN "MPN"
+F 6 "cap-cer-0402-100n" H 1400 1150 50  0001 C CNN "1b2-bom-key"
+	1    1400 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5ACF0AA9
+P 1000 1150
+F 0 "C1" H 1115 1196 50  0000 L CNN
+F 1 "4u7" H 1115 1105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1038 1000 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/400/lcc_commercial_general_en-837201.pdf" H 1000 1150 50  0001 C CNN
+F 4 "Taiyo Yuden" H -450 -250 50  0001 C CNN "Mfg"
+F 5 "LMK107BJ475KAHT" H -450 -250 50  0001 C CNN "MPN"
+F 6 "cap-cer-0603-4u7" H 1000 1150 50  0001 C CNN "1b2-bom-key"
+	1    1000 1150
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
