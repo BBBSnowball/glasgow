@@ -41,56 +41,56 @@ Wire Wire Line
 $Comp
 L Device:C C11
 U 1 1 5ACB69D3
-P 2600 -3300
-F 0 "C11" V 2450 -3300 50  0000 C CNN
-F 1 "9p" V 2750 -3300 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 2638 -3450 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/Yageo_UPY-AC_NP0X7R_16V-to-630V_12-1827077-1874686.pdf" H 2600 -3300 50  0001 C CNN
-F 4 "Yageo" H 1050 -6000 50  0001 C CNN "Mfg"
-F 5 "AC0402CRNPO9BN9R0" H 1050 -6000 50  0001 C CNN "MPN"
-F 6 "cap-cer-0402-9p" H 2600 -3300 50  0001 C CNN "1b2-bom-key"
-	1    2600 -3300
+P 4100 -1650
+F 0 "C11" V 3950 -1650 50  0000 C CNN
+F 1 "9p" V 4250 -1650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4138 -1800 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/Yageo_UPY-AC_NP0X7R_16V-to-630V_12-1827077-1874686.pdf" H 4100 -1650 50  0001 C CNN
+F 4 "Yageo" H 2550 -4350 50  0001 C CNN "Mfg"
+F 5 "AC0402CRNPO9BN9R0" H 2550 -4350 50  0001 C CNN "MPN"
+F 6 "cap-cer-0402-9p" H 4100 -1650 50  0001 C CNN "1b2-bom-key"
+	1    4100 -1650
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR06
 U 1 1 5ACB6D67
-P 2400 -2750
-F 0 "#PWR06" H 2400 -3000 50  0001 C CNN
-F 1 "GND" H 2405 -2923 50  0000 C CNN
-F 2 "" H 2400 -2750 50  0001 C CNN
-F 3 "" H 2400 -2750 50  0001 C CNN
-	1    2400 -2750
+P 3900 -1100
+F 0 "#PWR06" H 3900 -1350 50  0001 C CNN
+F 1 "GND" H 3905 -1273 50  0000 C CNN
+F 2 "" H 3900 -1100 50  0001 C CNN
+F 3 "" H 3900 -1100 50  0001 C CNN
+	1    3900 -1100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2400 -2750 2400 -2800
+	3900 -1100 3900 -1150
 Wire Wire Line
-	2400 -3300 2450 -3300
+	3900 -1650 3950 -1650
 Wire Wire Line
-	2450 -2800 2400 -2800
-Connection ~ 2400 -2800
+	3950 -1150 3900 -1150
+Connection ~ 3900 -1150
 Wire Wire Line
-	400  -3500 400  -3400
-Connection ~ 400  -3400
-Connection ~ 500  -3250
+	6750 -2800 6750 -2700
+Connection ~ 6750 -2700
+Connection ~ 6850 -2550
 Wire Wire Line
-	500  -3500 500  -3250
+	6850 -2800 6850 -2550
 Wire Wire Line
-	400  -3800 400  -3850
+	6750 -3100 6750 -3150
 Wire Wire Line
-	400  -3850 450  -3850
+	6750 -3150 6800 -3150
 Wire Wire Line
-	500  -3850 500  -3800
+	6850 -3150 6850 -3100
 $Comp
 L power:+3.3V #PWR011
 U 1 1 5ACBABAE
-P 450 -3900
-F 0 "#PWR011" H 450 -4050 50  0001 C CNN
-F 1 "+3.3V" H 465 -3727 50  0000 C CNN
-F 2 "" H 450 -3900 50  0001 C CNN
-F 3 "" H 450 -3900 50  0001 C CNN
-	1    450  -3900
+P 6800 -3200
+F 0 "#PWR011" H 6800 -3350 50  0001 C CNN
+F 1 "+3.3V" H 6815 -3027 50  0000 C CNN
+F 2 "" H 6800 -3200 50  0001 C CNN
+F 3 "" H 6800 -3200 50  0001 C CNN
+	1    6800 -3200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -101,23 +101,23 @@ Connection ~ 3550 1800
 Wire Wire Line
 	3550 1800 3550 1850
 Wire Wire Line
-	450  -3900 450  -3850
-Connection ~ 450  -3850
+	6800 -3200 6800 -3150
+Connection ~ 6800 -3150
 Wire Wire Line
-	450  -3850 500  -3850
-Text Label 150  -3250 0    50   ~ 0
+	6800 -3150 6850 -3150
+Text Label 6500 -2550 0    50   ~ 0
 SDA
-Text Label 150  -3400 0    50   ~ 0
+Text Label 6500 -2700 0    50   ~ 0
 SCL
 $Comp
 L power:GND #PWR05
 U 1 1 5ACCB418
-P 3150 -3050
-F 0 "#PWR05" H 3150 -3300 50  0001 C CNN
-F 1 "GND" H 3150 -3200 50  0000 C CNN
-F 2 "" H 3150 -3050 50  0001 C CNN
-F 3 "" H 3150 -3050 50  0001 C CNN
-	1    3150 -3050
+P 4650 -1400
+F 0 "#PWR05" H 4650 -1650 50  0001 C CNN
+F 1 "GND" H 4650 -1550 50  0000 C CNN
+F 2 "" H 4650 -1400 50  0001 C CNN
+F 3 "" H 4650 -1400 50  0001 C CNN
+	1    4650 -1400
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -364,15 +364,15 @@ Wire Wire Line
 $Comp
 L Device:C C12
 U 1 1 5AD0B949
-P 2600 -2800
-F 0 "C12" V 2450 -2800 50  0000 C CNN
-F 1 "9p" V 2750 -2800 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 2638 -2950 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/Yageo_UPY-AC_NP0X7R_16V-to-630V_12-1827077-1874686.pdf" H 2600 -2800 50  0001 C CNN
-F 4 "Yageo" H 1050 -6000 50  0001 C CNN "Mfg"
-F 5 "AC0402CRNPO9BN9R0" H 1050 -6000 50  0001 C CNN "MPN"
-F 6 "cap-cer-0402-9p" H 2600 -2800 50  0001 C CNN "1b2-bom-key"
-	1    2600 -2800
+P 4100 -1150
+F 0 "C12" V 3950 -1150 50  0000 C CNN
+F 1 "9p" V 4250 -1150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4138 -1300 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/Yageo_UPY-AC_NP0X7R_16V-to-630V_12-1827077-1874686.pdf" H 4100 -1150 50  0001 C CNN
+F 4 "Yageo" H 2550 -4350 50  0001 C CNN "Mfg"
+F 5 "AC0402CRNPO9BN9R0" H 2550 -4350 50  0001 C CNN "MPN"
+F 6 "cap-cer-0402-9p" H 4100 -1150 50  0001 C CNN "1b2-bom-key"
+	1    4100 -1150
 	0    1    1    0   
 $EndComp
 $Comp
@@ -484,9 +484,9 @@ Text Label 2450 4150 0    50   ~ 0
 USB_P
 Text Label 2450 4250 0    50   ~ 0
 USB_N
-Text Label 2950 -3300 0    50   ~ 0
+Text Label 4450 -1650 0    50   ~ 0
 XTALOUT
-Text Label 2950 -2800 0    50   ~ 0
+Text Label 4450 -1150 0    50   ~ 0
 XTALIN
 Wire Wire Line
 	600  6150 950  6150
@@ -876,29 +876,29 @@ Imax @ 3V3 = 34 mA
 $Comp
 L Connector:TestPoint TP4
 U 1 1 5AE223CE
-P 400 -3200
-F 0 "TP4" H 350 -2950 50  0000 L CNN
-F 1 "SDA" V 504 -3126 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 600 -3200 50  0001 C CNN
-F 3 "~" H 600 -3200 50  0001 C CNN
-	1    400  -3200
+P 6750 -2500
+F 0 "TP4" H 6700 -2250 50  0000 L CNN
+F 1 "SDA" V 6854 -2426 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6950 -2500 50  0001 C CNN
+F 3 "~" H 6950 -2500 50  0001 C CNN
+	1    6750 -2500
 	-1   0    0    1   
 $EndComp
 $Comp
 L Connector:TestPoint TP5
 U 1 1 5AE22A82
-P 500 -3200
-F 0 "TP5" H 450 -2950 50  0000 C CNN
-F 1 "SCL" V 604 -3126 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 700 -3200 50  0001 C CNN
-F 3 "~" H 700 -3200 50  0001 C CNN
-	1    500  -3200
+P 6850 -2500
+F 0 "TP5" H 6800 -2250 50  0000 C CNN
+F 1 "SCL" V 6954 -2426 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7050 -2500 50  0001 C CNN
+F 3 "~" H 7050 -2500 50  0001 C CNN
+	1    6850 -2500
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	400  -3400 400  -3200
+	6750 -2700 6750 -2500
 Wire Wire Line
-	500  -3200 500  -3250
+	6850 -2500 6850 -2550
 Wire Wire Line
 	2900 950  3200 950 
 Wire Wire Line
@@ -910,39 +910,39 @@ Wire Wire Line
 $Comp
 L Device:Crystal_GND24 Y1
 U 1 1 5ACC4BC0
-P 2850 -3050
-F 0 "Y1" V 3000 -3200 50  0000 L CNN
-F 1 "8M" V 2750 -3350 50  0000 L TNN
-F 2 "Glasgow:Crystal_SMD_3225-4Pin_3.2x2.5mm" H 2850 -3050 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/2008211535_JWT-JF4024M00009T8188070_C709181.pdf" H 2850 -3050 50  0001 C CNN
-F 4 "JWT" H 1050 -6000 50  0001 C CNN "Mfg"
-F 5 "JF4024M00009T8188070" H 1050 -6000 50  0001 C CNN "MPN"
-F 6 "xtal-smd3225-24mhz-9p" H 2850 -3050 50  0001 C CNN "1b2-bom-key"
-F 7 "9pF load" H 2850 -3050 50  0001 C CNN "Characteristics"
-	1    2850 -3050
+P 4350 -1400
+F 0 "Y1" V 4500 -1550 50  0000 L CNN
+F 1 "8M" V 4250 -1700 50  0000 L TNN
+F 2 "Glasgow:Crystal_SMD_3225-4Pin_3.2x2.5mm" H 4350 -1400 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2008211535_JWT-JF4024M00009T8188070_C709181.pdf" H 4350 -1400 50  0001 C CNN
+F 4 "JWT" H 2550 -4350 50  0001 C CNN "Mfg"
+F 5 "JF4024M00009T8188070" H 2550 -4350 50  0001 C CNN "MPN"
+F 6 "xtal-smd3225-24mhz-9p" H 4350 -1400 50  0001 C CNN "1b2-bom-key"
+F 7 "9pF load" H 4350 -1400 50  0001 C CNN "Characteristics"
+	1    4350 -1400
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	2400 -3300 2400 -3050
+	3900 -1650 3900 -1400
 Wire Wire Line
-	2750 -3300 2850 -3300
+	4250 -1650 4350 -1650
 Wire Wire Line
-	2750 -2800 2850 -2800
-Connection ~ 2850 -3300
+	4250 -1150 4350 -1150
+Connection ~ 4350 -1650
 Wire Wire Line
-	2650 -3050 2400 -3050
-Connection ~ 2400 -3050
+	4150 -1400 3900 -1400
+Connection ~ 3900 -1400
 Wire Wire Line
-	2400 -3050 2400 -2800
-Connection ~ 2850 -2800
+	3900 -1400 3900 -1150
+Connection ~ 4350 -1150
 Wire Wire Line
-	2850 -2800 3250 -2800
+	4350 -1150 4750 -1150
 Wire Wire Line
-	3050 -3050 3150 -3050
+	4550 -1400 4650 -1400
 Wire Wire Line
-	2850 -3300 2850 -3200
+	4350 -1650 4350 -1550
 Wire Wire Line
-	2850 -2900 2850 -2800
+	4350 -1250 4350 -1150
 $Comp
 L power:GND #PWR044
 U 1 1 5B2F5672
@@ -1598,29 +1598,29 @@ $EndComp
 $Comp
 L Device:R R1
 U 1 1 5ACB7B47
-P 400 -3650
-F 0 "R1" H 350 -3650 50  0000 R CNN
-F 1 "2k2" V 400 -3650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 330 -3650 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 400 -3650 50  0001 C CNN
-F 4 "Yageo" H -1500 -8600 50  0001 C CNN "Mfg"
-F 5 "RC0402FR-132K2L" H -1500 -8600 50  0001 C CNN "MPN"
-F 6 "res-0402-2k2" H 400 -3650 50  0001 C CNN "1b2-bom-key"
-	1    400  -3650
+P 6750 -2950
+F 0 "R1" H 6700 -2950 50  0000 R CNN
+F 1 "2k2" V 6750 -2950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 6680 -2950 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 6750 -2950 50  0001 C CNN
+F 4 "Yageo" H 4850 -7900 50  0001 C CNN "Mfg"
+F 5 "RC0402FR-132K2L" H 4850 -7900 50  0001 C CNN "MPN"
+F 6 "res-0402-2k2" H 6750 -2950 50  0001 C CNN "1b2-bom-key"
+	1    6750 -2950
 	1    0    0    1   
 $EndComp
 $Comp
 L Device:R R2
 U 1 1 5AD252CA
-P 500 -3650
-F 0 "R2" H 450 -3650 50  0000 R CNN
-F 1 "2k2" V 500 -3650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 430 -3650 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 500 -3650 50  0001 C CNN
-F 4 "Yageo" H -1500 -8600 50  0001 C CNN "Mfg"
-F 5 "RC0402FR-132K2L" H -1500 -8600 50  0001 C CNN "MPN"
-F 6 "res-0402-2k2" H 500 -3650 50  0001 C CNN "1b2-bom-key"
-	1    500  -3650
+P 6850 -2950
+F 0 "R2" H 6800 -2950 50  0000 R CNN
+F 1 "2k2" V 6850 -2950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 6780 -2950 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 6850 -2950 50  0001 C CNN
+F 4 "Yageo" H 4850 -7900 50  0001 C CNN "Mfg"
+F 5 "RC0402FR-132K2L" H 4850 -7900 50  0001 C CNN "MPN"
+F 6 "res-0402-2k2" H 6850 -2950 50  0001 C CNN "1b2-bom-key"
+	1    6850 -2950
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -2018,478 +2018,378 @@ F 3 "" H 8700 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Glasgow:GD32VF103 U7
-U 1 1 6024FFE4
-P -900 -5100
-F 0 "U7" H -933 -4085 50  0000 C CNN
-F 1 "GD32VF103" H -933 -4176 50  0000 C CNN
-F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H -900 -5100 50  0001 C CNN
-F 3 "" H -900 -5100 50  0001 C CNN
-	1    -900 -5100
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Glasgow:GD32VF103 U7
-U 2 1 6138564C
-P -950 -2650
-F 0 "U7" H -1250 -1200 50  0000 L CNN
-F 1 "GD32VF103" H -1250 -1300 50  0000 L CNN
-F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H -950 -2650 50  0001 C CNN
-F 3 "" H -950 -2650 50  0001 C CNN
-	2    -950 -2650
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Glasgow:GD32VF103 U7
-U 3 1 61387E48
-P 3850 -4800
-F 0 "U7" H 3500 -3800 50  0000 L CNN
-F 1 "GD32VF103" H 3500 -3900 50  0000 L CNN
-F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 3850 -4800 50  0001 C CNN
-F 3 "" H 3850 -4800 50  0001 C CNN
-	3    3850 -4800
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Glasgow:GD32VF103 U7
-U 4 1 61389D30
-P 3900 -2900
-F 0 "U7" H 3850 -2035 50  0000 C CNN
-F 1 "GD32VF103" H 3850 -2126 50  0000 C CNN
-F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 3900 -2900 50  0001 C CNN
-F 3 "" H 3900 -2900 50  0001 C CNN
-	4    3900 -2900
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3.3V #PWR0101
 U 1 1 614A686B
-P 4800 -3600
-F 0 "#PWR0101" H 4800 -3750 50  0001 C CNN
-F 1 "+3.3V" H 4815 -3427 50  0000 C CNN
-F 2 "" H 4800 -3600 50  0001 C CNN
-F 3 "" H 4800 -3600 50  0001 C CNN
-	1    4800 -3600
+P 6300 -1950
+F 0 "#PWR0101" H 6300 -2100 50  0001 C CNN
+F 1 "+3.3V" H 6315 -1777 50  0000 C CNN
+F 2 "" H 6300 -1950 50  0001 C CNN
+F 3 "" H 6300 -1950 50  0001 C CNN
+	1    6300 -1950
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R10
 U 1 1 614AF37B
-P 4550 -3500
-F 0 "R10" V 4450 -3500 50  0000 C CNN
-F 1 "0" V 4550 -3500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 4480 -3500 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 4550 -3500 50  0001 C CNN
-F 4 "Yageo" H 150 -8800 50  0001 C CNN "Mfg"
-F 5 "RC0402FR-13100KL" H 150 -8800 50  0001 C CNN "MPN"
-F 6 "res-0402-100k" H 4550 -3500 50  0001 C CNN "1b2-bom-key"
-	1    4550 -3500
+P 6050 -1850
+F 0 "R10" V 5950 -1850 50  0000 C CNN
+F 1 "0" V 6050 -1850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5980 -1850 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 6050 -1850 50  0001 C CNN
+F 4 "Yageo" H 1650 -7150 50  0001 C CNN "Mfg"
+F 5 "RC0402FR-13100KL" H 1650 -7150 50  0001 C CNN "MPN"
+F 6 "res-0402-100k" H 6050 -1850 50  0001 C CNN "1b2-bom-key"
+	1    6050 -1850
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR0121
 U 1 1 614BBA48
-P 4400 -2350
-F 0 "#PWR0121" H 4400 -2600 50  0001 C CNN
-F 1 "GND" H 4405 -2523 50  0000 C CNN
-F 2 "" H 4400 -2350 50  0001 C CNN
-F 3 "" H 4400 -2350 50  0001 C CNN
-	1    4400 -2350
+P 5900 -700
+F 0 "#PWR0121" H 5900 -950 50  0001 C CNN
+F 1 "GND" H 5905 -873 50  0000 C CNN
+F 2 "" H 5900 -700 50  0001 C CNN
+F 3 "" H 5900 -700 50  0001 C CNN
+	1    5900 -700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4400 -2350 4400 -2450
+	5900 -700 5900 -800
 Wire Wire Line
-	4400 -2900 4300 -2900
+	5900 -1250 5800 -1250
 Wire Wire Line
-	4300 -2750 4400 -2750
-Connection ~ 4400 -2750
+	5800 -1100 5900 -1100
+Connection ~ 5900 -1100
 Wire Wire Line
-	4400 -2750 4400 -2900
+	5900 -1100 5900 -1250
 Wire Wire Line
-	4300 -2600 4400 -2600
-Connection ~ 4400 -2600
+	5800 -950 5900 -950
+Connection ~ 5900 -950
 Wire Wire Line
-	4400 -2600 4400 -2750
+	5900 -950 5900 -1100
 Wire Wire Line
-	4300 -2450 4400 -2450
-Connection ~ 4400 -2450
+	5800 -800 5900 -800
+Connection ~ 5900 -800
 Wire Wire Line
-	4400 -2450 4400 -2600
+	5900 -800 5900 -950
 Wire Wire Line
-	4300 -3050 4800 -3050
+	5800 -1400 6300 -1400
 Wire Wire Line
-	4800 -3050 4800 -3200
+	6300 -1400 6300 -1550
 Wire Wire Line
-	4700 -3500 4800 -3500
-Connection ~ 4800 -3500
+	6200 -1850 6300 -1850
+Connection ~ 6300 -1850
 Wire Wire Line
-	4800 -3500 4800 -3600
+	6300 -1850 6300 -1950
 Wire Wire Line
-	4400 -3500 4300 -3500
+	5900 -1850 5800 -1850
 Wire Wire Line
-	4300 -3350 4800 -3350
-Connection ~ 4800 -3350
+	5800 -1700 6300 -1700
+Connection ~ 6300 -1700
 Wire Wire Line
-	4800 -3350 4800 -3500
+	6300 -1700 6300 -1850
 Wire Wire Line
-	4300 -3200 4800 -3200
-Connection ~ 4800 -3200
+	5800 -1550 6300 -1550
+Connection ~ 6300 -1550
 Wire Wire Line
-	4800 -3200 4800 -3350
+	6300 -1550 6300 -1700
 Wire Wire Line
-	3250 -2800 3250 -2900
+	4750 -1150 4750 -1250
 Wire Wire Line
-	3250 -2900 3400 -2900
+	4750 -1250 4900 -1250
 Wire Wire Line
-	3400 -3050 3400 -3300
+	4900 -1400 4900 -1650
 Wire Wire Line
-	2850 -3300 3400 -3300
+	4350 -1650 4900 -1650
 $Comp
 L Device:R R9
 U 1 1 616E008C
-P 3000 -2600
-F 0 "R9" V 2900 -2600 50  0000 C CNN
-F 1 "10k" V 3000 -2600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 2930 -2600 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 3000 -2600 50  0001 C CNN
-F 4 "Yageo" H -1400 -7900 50  0001 C CNN "Mfg"
-F 5 "RC0402FR-13100KL" H -1400 -7900 50  0001 C CNN "MPN"
-F 6 "res-0402-100k" H 3000 -2600 50  0001 C CNN "1b2-bom-key"
-	1    3000 -2600
+P 4500 -950
+F 0 "R9" V 4400 -950 50  0000 C CNN
+F 1 "10k" V 4500 -950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4430 -950 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 4500 -950 50  0001 C CNN
+F 4 "Yageo" H 100 -6250 50  0001 C CNN "Mfg"
+F 5 "RC0402FR-13100KL" H 100 -6250 50  0001 C CNN "MPN"
+F 6 "res-0402-100k" H 4500 -950 50  0001 C CNN "1b2-bom-key"
+	1    4500 -950
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:C C17
 U 1 1 616E0BDD
-P 3250 -2350
-F 0 "C17" H 3365 -2304 50  0000 L CNN
-F 1 "u1" H 3365 -2395 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 3288 -2500 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/396/mlcc02_e-1307760.pdf" H 3250 -2350 50  0001 C CNN
-F 4 "Taiyo Yuden" H -1850 -3750 50  0001 C CNN "Mfg"
-F 5 "TMK105BJ104KV-F" H -1850 -3750 50  0001 C CNN "MPN"
-F 6 "cap-cer-0402-100n" H 3250 -2350 50  0001 C CNN "1b2-bom-key"
-	1    3250 -2350
+P 4750 -700
+F 0 "C17" H 4865 -654 50  0000 L CNN
+F 1 "u1" H 4865 -745 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4788 -850 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/396/mlcc02_e-1307760.pdf" H 4750 -700 50  0001 C CNN
+F 4 "Taiyo Yuden" H -350 -2100 50  0001 C CNN "Mfg"
+F 5 "TMK105BJ104KV-F" H -350 -2100 50  0001 C CNN "MPN"
+F 6 "cap-cer-0402-100n" H 4750 -700 50  0001 C CNN "1b2-bom-key"
+	1    4750 -700
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3.3V #PWR0123
 U 1 1 616E5CBD
-P 2850 -2600
-F 0 "#PWR0123" H 2850 -2750 50  0001 C CNN
-F 1 "+3.3V" H 2865 -2427 50  0000 C CNN
-F 2 "" H 2850 -2600 50  0001 C CNN
-F 3 "" H 2850 -2600 50  0001 C CNN
-	1    2850 -2600
+P 4350 -950
+F 0 "#PWR0123" H 4350 -1100 50  0001 C CNN
+F 1 "+3.3V" H 4365 -777 50  0000 C CNN
+F 2 "" H 4350 -950 50  0001 C CNN
+F 3 "" H 4350 -950 50  0001 C CNN
+	1    4350 -950
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3250 -2500 3250 -2600
+	4750 -850 4750 -950
 Wire Wire Line
-	3250 -2750 3400 -2750
+	4750 -1100 4900 -1100
 Wire Wire Line
-	3150 -2600 3250 -2600
-Connection ~ 3250 -2600
+	4650 -950 4750 -950
+Connection ~ 4750 -950
 Wire Wire Line
-	3250 -2600 3250 -2750
+	4750 -950 4750 -1100
 $Comp
 L power:GND #PWR0124
 U 1 1 6173C765
-P 3250 -2200
-F 0 "#PWR0124" H 3250 -2450 50  0001 C CNN
-F 1 "GND" H 3255 -2373 50  0000 C CNN
-F 2 "" H 3250 -2200 50  0001 C CNN
-F 3 "" H 3250 -2200 50  0001 C CNN
-	1    3250 -2200
+P 4750 -550
+F 0 "#PWR0124" H 4750 -800 50  0001 C CNN
+F 1 "GND" H 4755 -723 50  0000 C CNN
+F 2 "" H 4750 -550 50  0001 C CNN
+F 3 "" H 4750 -550 50  0001 C CNN
+	1    4750 -550
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C15
-U 1 1 6173CFB7
-P 3250 -3500
-F 0 "C15" H 3365 -3454 50  0000 L CNN
-F 1 "u1" H 3365 -3545 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 3288 -3650 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/396/mlcc02_e-1307760.pdf" H 3250 -3500 50  0001 C CNN
-F 4 "Taiyo Yuden" H -1850 -4900 50  0001 C CNN "Mfg"
-F 5 "TMK105BJ104KV-F" H -1850 -4900 50  0001 C CNN "MPN"
-F 6 "cap-cer-0402-100n" H 3250 -3500 50  0001 C CNN "1b2-bom-key"
-	1    3250 -3500
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0132
-U 1 1 6173D8E3
-P 3100 -3500
-F 0 "#PWR0132" H 3100 -3750 50  0001 C CNN
-F 1 "GND" H 3105 -3673 50  0000 C CNN
-F 2 "" H 3100 -3500 50  0001 C CNN
-F 3 "" H 3100 -3500 50  0001 C CNN
-	1    3100 -3500
-	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R18
 U 1 1 6177855F
-P 5200 -4050
-F 0 "R18" V 5100 -4050 50  0000 C CNN
-F 1 "100k" V 5200 -4050 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 5130 -4050 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 5200 -4050 50  0001 C CNN
-F 4 "Yageo" H 800 -9350 50  0001 C CNN "Mfg"
-F 5 "RC0402FR-13100KL" H 800 -9350 50  0001 C CNN "MPN"
-F 6 "res-0402-100k" H 5200 -4050 50  0001 C CNN "1b2-bom-key"
-	1    5200 -4050
+P 7400 -1500
+F 0 "R18" V 7300 -1500 50  0000 C CNN
+F 1 "100k" V 7400 -1500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 7330 -1500 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 7400 -1500 50  0001 C CNN
+F 4 "Yageo" H 3000 -6800 50  0001 C CNN "Mfg"
+F 5 "RC0402FR-13100KL" H 3000 -6800 50  0001 C CNN "MPN"
+F 6 "res-0402-100k" H 7400 -1500 50  0001 C CNN "1b2-bom-key"
+	1    7400 -1500
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0136
 U 1 1 617792E7
-P 5200 -3800
-F 0 "#PWR0136" H 5200 -4050 50  0001 C CNN
-F 1 "GND" H 5205 -3973 50  0000 C CNN
-F 2 "" H 5200 -3800 50  0001 C CNN
-F 3 "" H 5200 -3800 50  0001 C CNN
-	1    5200 -3800
+P 7400 -1250
+F 0 "#PWR0136" H 7400 -1500 50  0001 C CNN
+F 1 "GND" H 7405 -1423 50  0000 C CNN
+F 2 "" H 7400 -1250 50  0001 C CNN
+F 3 "" H 7400 -1250 50  0001 C CNN
+	1    7400 -1250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5200 -4350 5200 -4200
+	7400 -1800 7400 -1650
 Wire Wire Line
-	5200 -3900 5200 -3800
+	7400 -1350 7400 -1250
 $Comp
 L Device:R R17
 U 1 1 617D3730
-P 5200 -4600
-F 0 "R17" V 5100 -4600 50  0000 C CNN
-F 1 "DNP" V 5200 -4600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 5130 -4600 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 5200 -4600 50  0001 C CNN
-F 4 "Yageo" H 800 -9900 50  0001 C CNN "Mfg"
-F 5 "RC0402FR-13100KL" H 800 -9900 50  0001 C CNN "MPN"
-F 6 "res-0402-100k" H 5200 -4600 50  0001 C CNN "1b2-bom-key"
-	1    5200 -4600
+P 7400 -2050
+F 0 "R17" V 7300 -2050 50  0000 C CNN
+F 1 "DNP" V 7400 -2050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 7330 -2050 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 7400 -2050 50  0001 C CNN
+F 4 "Yageo" H 3000 -7350 50  0001 C CNN "Mfg"
+F 5 "RC0402FR-13100KL" H 3000 -7350 50  0001 C CNN "MPN"
+F 6 "res-0402-100k" H 7400 -2050 50  0001 C CNN "1b2-bom-key"
+	1    7400 -2050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5200 -4350 5200 -4450
-Connection ~ 5200 -4350
+	7400 -1800 7400 -1900
+Connection ~ 7400 -1800
 Wire Wire Line
-	5200 -4750 5200 -4850
+	7400 -2200 7400 -2300
 $Comp
 L power:+3.3V #PWR0137
 U 1 1 6182B6DD
-P 5200 -4850
-F 0 "#PWR0137" H 5200 -5000 50  0001 C CNN
-F 1 "+3.3V" H 5215 -4677 50  0000 C CNN
-F 2 "" H 5200 -4850 50  0001 C CNN
-F 3 "" H 5200 -4850 50  0001 C CNN
-	1    5200 -4850
+P 7400 -2300
+F 0 "#PWR0137" H 7400 -2450 50  0001 C CNN
+F 1 "+3.3V" H 7415 -2127 50  0000 C CNN
+F 2 "" H 7400 -2300 50  0001 C CNN
+F 3 "" H 7400 -2300 50  0001 C CNN
+	1    7400 -2300
 	1    0    0    -1  
 $EndComp
-Text Notes 5400 -4250 1    50   ~ 0
+Text Notes 7600 -1700 1    50   ~ 0
 short this for bootloader
 Wire Wire Line
-	4300 -4350 5200 -4350
+	7050 -1800 7400 -1800
 Wire Wire Line
-	-550 -2050 -300 -2050
-Text Label -500 -2050 0    50   ~ 0
+	2150 -1000 2500 -1000
+Text Label 2500 -1000 2    50   ~ 0
 USB_N
 Wire Wire Line
-	-550 -1900 -300 -1900
-Text Label -500 -1900 0    50   ~ 0
+	2150 -850 2500 -850
+Text Label 2500 -850 2    50   ~ 0
 USB_P
 Wire Wire Line
-	-550 -2350 -300 -2350
+	2150 -1300 2400 -1300
 $Comp
 L power:+5V #PWR0138
 U 1 1 6196A009
-P -300 -2350
-F 0 "#PWR0138" H -300 -2500 50  0001 C CNN
-F 1 "+5V" H -450 -2300 50  0000 C CNN
-F 2 "" H -300 -2350 50  0001 C CNN
-F 3 "" H -300 -2350 50  0001 C CNN
-	1    -300 -2350
+P 2400 -1300
+F 0 "#PWR0138" H 2400 -1450 50  0001 C CNN
+F 1 "+5V" H 2250 -1250 50  0000 C CNN
+F 2 "" H 2400 -1300 50  0001 C CNN
+F 3 "" H 2400 -1300 50  0001 C CNN
+	1    2400 -1300
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R7
 U 1 1 619754B8
-P -200 -3550
-F 0 "R7" V -300 -3550 50  0000 C CNN
-F 1 "10k" V -200 -3550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V -270 -3550 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H -200 -3550 50  0001 C CNN
-F 4 "Yageo" H -4600 -8850 50  0001 C CNN "Mfg"
-F 5 "RC0402FR-13100KL" H -4600 -8850 50  0001 C CNN "MPN"
-F 6 "res-0402-100k" H -200 -3550 50  0001 C CNN "1b2-bom-key"
-	1    -200 -3550
+P 2500 -1600
+F 0 "R7" V 2400 -1600 50  0000 C CNN
+F 1 "10k" V 2500 -1600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 2430 -1600 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 2500 -1600 50  0001 C CNN
+F 4 "Yageo" H -1900 -6900 50  0001 C CNN "Mfg"
+F 5 "RC0402FR-13100KL" H -1900 -6900 50  0001 C CNN "MPN"
+F 6 "res-0402-100k" H 2500 -1600 50  0001 C CNN "1b2-bom-key"
+	1    2500 -1600
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	-350 -3550 -450 -3550
+	2350 -1600 2250 -1600
 $Comp
 L power:GND #PWR0140
 U 1 1 619A343D
-P -50 -3550
-F 0 "#PWR0140" H -50 -3800 50  0001 C CNN
-F 1 "GND" H -45 -3723 50  0000 C CNN
-F 2 "" H -50 -3550 50  0001 C CNN
-F 3 "" H -50 -3550 50  0001 C CNN
-	1    -50  -3550
+P 2650 -1600
+F 0 "#PWR0140" H 2650 -1850 50  0001 C CNN
+F 1 "GND" H 2655 -1773 50  0000 C CNN
+F 2 "" H 2650 -1600 50  0001 C CNN
+F 3 "" H 2650 -1600 50  0001 C CNN
+	1    2650 -1600
 	0    -1   -1   0   
 $EndComp
-Text GLabel -400 -5400 2    50   Input ~ 0
+Text GLabel 2300 -3450 2    50   Input ~ 0
 ADC0
-Text GLabel -400 -5250 2    50   Input ~ 0
+Text GLabel 2300 -3300 2    50   Input ~ 0
 ADC1
-Text GLabel -400 -5100 2    50   Input ~ 0
+Text GLabel 2300 -3150 2    50   Input ~ 0
 ADC2
-Text GLabel -400 -4950 2    50   Input ~ 0
+Text GLabel 2300 -3000 2    50   Input ~ 0
 ADC3
-Text GLabel -400 -4500 2    50   Input ~ 0
+Text GLabel 2300 -2550 2    50   Input ~ 0
 ADC4
-Text GLabel -400 -4350 2    50   Input ~ 0
+Text GLabel 2300 -2400 2    50   Input ~ 0
 ADC5
-Text GLabel -400 -3700 2    50   Input ~ 0
+Text GLabel 2300 -1750 2    50   Input ~ 0
 VIO_CURRENT
-Text GLabel -400 -3850 2    50   Input ~ 0
+Text GLabel 2300 -1900 2    50   Input ~ 0
 ADC6
 Wire Wire Line
-	-550 -3400 400  -3400
+	5800 -2700 6750 -2700
 Wire Wire Line
-	-550 -3250 500  -3250
-Text GLabel -400 -3100 2    50   Input ~ 0
-FPGA_CS
-Text GLabel -400 -2950 2    50   Input ~ 0
-FPGA_SCK
-Text GLabel -400 -2800 2    50   Input ~ 0
-FPGA_MISO
-Text GLabel -400 -2650 2    50   Input ~ 0
-FPGA_MOSI
-Text Label -200 -2200 2    50   ~ 0
+	5800 -2550 6850 -2550
+Text Label 2500 -1150 2    50   ~ 0
 LED_ACT
 Wire Wire Line
-	-550 -2500 150  -2500
+	2150 -1450 2850 -1450
 Wire Wire Line
-	-400 -2650 -550 -2650
+	2150 -1750 2300 -1750
 Wire Wire Line
-	-550 -2800 -400 -2800
+	2150 -1900 2300 -1900
 Wire Wire Line
-	-400 -2950 -550 -2950
+	2250 -1600 2250 -2100
 Wire Wire Line
-	-550 -3100 -400 -3100
+	2250 -2100 2350 -2100
+Connection ~ 2250 -1600
 Wire Wire Line
-	-550 -3700 -400 -3700
-Wire Wire Line
-	-550 -3850 -400 -3850
-Wire Wire Line
-	-450 -3550 -450 -4050
-Wire Wire Line
-	-450 -4050 -350 -4050
-Connection ~ -450 -3550
-Wire Wire Line
-	-450 -3550 -550 -3550
-Text GLabel -350 -4050 2    50   Input ~ 0
+	2250 -1600 2150 -1600
+Text GLabel 2350 -2100 2    50   Input ~ 0
 VIO_ENA
-Text Notes -350 -4150 0    50   ~ 0
+Text Notes 2350 -2200 0    50   ~ 0
 PB2 is also BOOT1, which should be low during startup
 Wire Wire Line
-	-400 -4350 -500 -4350
+	2300 -2400 2200 -2400
 Wire Wire Line
-	-500 -4500 -400 -4500
+	2200 -2550 2300 -2550
 Wire Wire Line
-	-500 -4950 -400 -4950
+	2200 -3000 2300 -3000
 Wire Wire Line
-	-500 -5100 -400 -5100
+	2200 -3150 2300 -3150
 Wire Wire Line
-	-500 -5250 -400 -5250
+	2200 -3300 2300 -3300
 Wire Wire Line
-	-500 -5400 -400 -5400
-Text GLabel -400 -4650 2    50   Input ~ 0
+	2200 -3450 2300 -3450
+Text GLabel 2300 -2700 2    50   Input ~ 0
 ADC7
 Wire Wire Line
-	-400 -4650 -500 -4650
+	2300 -2700 2200 -2700
 Wire Wire Line
-	-500 -4800 -400 -4800
-Text GLabel -400 -4800 2    50   Input ~ 0
+	2200 -2850 2300 -2850
+Text GLabel 2300 -2850 2    50   Input ~ 0
 VIO_DAC
 $Comp
-L Connector:TestPoint TP6
+L Connector:TestPoint TP40
 U 1 1 61E485FE
-P 4400 -5550
-F 0 "TP6" H 4350 -5450 50  0000 R CNN
-F 1 "USBGND" V 4504 -5476 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4600 -5550 50  0001 C CNN
-F 3 "~" H 4600 -5550 50  0001 C CNN
-	1    4400 -5550
+P 7500 -3850
+F 0 "TP40" H 7450 -3750 50  0000 R CNN
+F 1 "TMS" V 7604 -3776 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7700 -3850 50  0001 C CNN
+F 3 "~" H 7700 -3850 50  0001 C CNN
+	1    7500 -3850
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:TestPoint TP7
+L Connector:TestPoint TP41
 U 1 1 61E56773
-P 4400 -5400
-F 0 "TP7" H 4350 -5300 50  0000 R CNN
-F 1 "USBGND" V 4504 -5326 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4600 -5400 50  0001 C CNN
-F 3 "~" H 4600 -5400 50  0001 C CNN
-	1    4400 -5400
+P 7650 -3750
+F 0 "TP41" H 7600 -3650 50  0000 R CNN
+F 1 "TCK" V 7754 -3676 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7850 -3750 50  0001 C CNN
+F 3 "~" H 7850 -3750 50  0001 C CNN
+	1    7650 -3750
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:TestPoint TP18
+L Connector:TestPoint TP42
 U 1 1 61E56FFB
-P 4400 -5250
-F 0 "TP18" H 4350 -5150 50  0000 R CNN
-F 1 "USBGND" V 4504 -5176 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4600 -5250 50  0001 C CNN
-F 3 "~" H 4600 -5250 50  0001 C CNN
-	1    4400 -5250
+P 7800 -3650
+F 0 "TP42" H 7750 -3550 50  0000 R CNN
+F 1 "TDI" V 7904 -3576 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 8000 -3650 50  0001 C CNN
+F 3 "~" H 8000 -3650 50  0001 C CNN
+	1    7800 -3650
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:TestPoint TP20
+L Connector:TestPoint TP43
 U 1 1 61E577F6
-P 4400 -5100
-F 0 "TP20" H 4350 -5000 50  0000 R CNN
-F 1 "USBGND" V 4504 -5026 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4600 -5100 50  0001 C CNN
-F 3 "~" H 4600 -5100 50  0001 C CNN
-	1    4400 -5100
+P 7950 -3550
+F 0 "TP43" H 7900 -3450 50  0000 R CNN
+F 1 "TDO" V 8054 -3476 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 8150 -3550 50  0001 C CNN
+F 3 "~" H 8150 -3550 50  0001 C CNN
+	1    7950 -3550
 	0    1    1    0   
 $EndComp
-$Comp
-L Connector:TestPoint TP21
-U 1 1 61E5803C
-P 4400 -4950
-F 0 "TP21" H 4350 -4850 50  0000 R CNN
-F 1 "USBGND" V 4504 -4876 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4600 -4950 50  0001 C CNN
-F 3 "~" H 4600 -4950 50  0001 C CNN
-	1    4400 -4950
-	0    1    1    0   
-$EndComp
-Text Notes 4600 -5200 0    50   ~ 0
+Text Notes 7500 -3450 0    50   ~ 0
 JTAG
 Wire Wire Line
-	4400 -4950 4300 -4950
+	7950 -3550 7400 -3550
 Wire Wire Line
-	4400 -5100 4300 -5100
+	7400 -3650 7800 -3650
 Wire Wire Line
-	4300 -5250 4400 -5250
+	7650 -3750 7400 -3750
 Wire Wire Line
-	4400 -5400 4300 -5400
-Wire Wire Line
-	4300 -5550 4400 -5550
-Wire Wire Line
-	4300 -4800 4800 -4800
-Text Notes 50   -2900 0    50   ~ 0
+	7400 -3850 7500 -3850
+Text Notes 6400 -3150 0    50   ~ 0
 CLKIF
-Text Label 150  -2500 2    50   ~ 0
+Text Label 2850 -1450 2    50   ~ 0
 CLKREF
 Wire Wire Line
-	-550 -2200 -200 -2200
+	2150 -1150 2500 -1150
 $Comp
 L power:GND #PWR0120
 U 1 1 5B138DA0
@@ -2876,234 +2776,136 @@ Wire Wire Line
 	-4800 5500 -5000 5500
 Wire Wire Line
 	-5000 5300 -4800 5300
-Wire Wire Line
-	4300 -4650 4800 -4650
-Text Label 4800 -4800 2    50   ~ 0
+Text Label 6300 -3450 2    50   ~ 0
 ~FPGA_RESET
-Text Label 4800 -4650 2    50   ~ 0
+Text Label 6300 -3600 2    50   ~ 0
 FPGA_DONE
 $Comp
-L Glasgow:GD32VF103T U?
+L Glasgow:GD32VF103T U2
 U 1 1 603FF9FD
-P 6900 -6200
-F 0 "U?" H 6842 -5435 50  0000 C CNN
-F 1 "GD32VF103T" H 6842 -5526 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP4.1x4.1mm" H 6900 -6200 50  0001 C CNN
-F 3 "http://www.gd32mcu.com/data/documents/shujushouce/GD32VF103_Datasheet_Rev_1.3.pdf" H 6900 -6200 50  0001 C CNN
-	1    6900 -6200
+P 1800 -2950
+F 0 "U2" H 1742 -2185 50  0000 C CNN
+F 1 "GD32VF103T" H 1742 -2276 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP4.1x4.1mm" H 1800 -2950 50  0001 C CNN
+F 3 "http://www.gd32mcu.com/data/documents/shujushouce/GD32VF103_Datasheet_Rev_1.3.pdf" H 1800 -2950 50  0001 C CNN
+	1    1800 -2950
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Glasgow:GD32VF103T U?
+L Glasgow:GD32VF103T U2
 U 2 1 6040456B
-P 6900 -4600
-F 0 "U?" H 6842 -3835 50  0000 C CNN
-F 1 "GD32VF103T" H 6842 -3926 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP4.1x4.1mm" H 6900 -4600 50  0001 C CNN
-F 3 "http://www.gd32mcu.com/data/documents/shujushouce/GD32VF103_Datasheet_Rev_1.3.pdf" H 6900 -4600 50  0001 C CNN
-	2    6900 -4600
+P 1750 -1400
+F 0 "U2" H 1692 -635 50  0000 C CNN
+F 1 "GD32VF103T" H 1692 -726 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP4.1x4.1mm" H 1750 -1400 50  0001 C CNN
+F 3 "http://www.gd32mcu.com/data/documents/shujushouce/GD32VF103_Datasheet_Rev_1.3.pdf" H 1750 -1400 50  0001 C CNN
+	2    1750 -1400
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Glasgow:GD32VF103T U?
+L Glasgow:GD32VF103T U2
 U 3 1 604078AB
-P 6850 -3000
-F 0 "U?" H 6767 -2135 50  0000 C CNN
-F 1 "GD32VF103T" H 6767 -2226 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP4.1x4.1mm" H 6850 -3000 50  0001 C CNN
-F 3 "http://www.gd32mcu.com/data/documents/shujushouce/GD32VF103_Datasheet_Rev_1.3.pdf" H 6850 -3000 50  0001 C CNN
-	3    6850 -3000
+P 5350 -3000
+F 0 "U2" H 5267 -2135 50  0000 C CNN
+F 1 "GD32VF103T" H 5267 -2226 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP4.1x4.1mm" H 5350 -3000 50  0001 C CNN
+F 3 "http://www.gd32mcu.com/data/documents/shujushouce/GD32VF103_Datasheet_Rev_1.3.pdf" H 5350 -3000 50  0001 C CNN
+	3    5350 -3000
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Glasgow:GD32VF103T U?
+L Glasgow:GD32VF103T U2
 U 4 1 60409FF5
-P 6950 -1350
-F 0 "U?" H 6900 -485 50  0000 C CNN
-F 1 "GD32VF103T" H 6900 -576 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP4.1x4.1mm" H 6950 -1350 50  0001 C CNN
-F 3 "http://www.gd32mcu.com/data/documents/shujushouce/GD32VF103_Datasheet_Rev_1.3.pdf" H 6950 -1350 50  0001 C CNN
-	4    6950 -1350
+P 5400 -1250
+F 0 "U2" H 5350 -385 50  0000 C CNN
+F 1 "GD32VF103T" H 5350 -476 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP4.1x4.1mm" H 5400 -1250 50  0001 C CNN
+F 3 "http://www.gd32mcu.com/data/documents/shujushouce/GD32VF103_Datasheet_Rev_1.3.pdf" H 5400 -1250 50  0001 C CNN
+	4    5400 -1250
 	1    0    0    -1  
 $EndComp
-Text Label 7550 -2550 2    50   ~ 0
-SDA
-Text Label 7550 -2700 2    50   ~ 0
-SCL
-Wire Wire Line
-	7300 -4200 7550 -4200
-Text Label 7350 -4200 0    50   ~ 0
-USB_N
-Wire Wire Line
-	7300 -4050 7550 -4050
-Text Label 7350 -4050 0    50   ~ 0
-USB_P
-Wire Wire Line
-	7300 -4500 7550 -4500
-$Comp
-L power:+5V #PWR?
-U 1 1 6040CC09
-P 7550 -4500
-F 0 "#PWR?" H 7550 -4650 50  0001 C CNN
-F 1 "+5V" H 7400 -4450 50  0000 C CNN
-F 2 "" H 7550 -4500 50  0001 C CNN
-F 3 "" H 7550 -4500 50  0001 C CNN
-	1    7550 -4500
-	0    1    1    0   
-$EndComp
-Text GLabel 7400 -6700 2    50   Input ~ 0
-ADC0
-Text GLabel 7400 -6550 2    50   Input ~ 0
-ADC1
-Text GLabel 7400 -6400 2    50   Input ~ 0
-ADC2
-Text GLabel 7400 -6250 2    50   Input ~ 0
-ADC3
-Text GLabel 7400 -5800 2    50   Input ~ 0
-ADC4
-Text GLabel 7400 -5650 2    50   Input ~ 0
-ADC5
-Text GLabel 7450 -4950 2    50   Input ~ 0
-VIO_CURRENT
-Text GLabel 7450 -5100 2    50   Input ~ 0
-ADC6
-Text GLabel 7450 -3300 2    50   Input ~ 0
+Text GLabel 5950 -3300 2    50   Input ~ 0
 FPGA_CS
-Text GLabel 7450 -3150 2    50   Input ~ 0
+Text GLabel 5950 -3150 2    50   Input ~ 0
 FPGA_SCK
-Text GLabel 7450 -3000 2    50   Input ~ 0
+Text GLabel 5950 -3000 2    50   Input ~ 0
 FPGA_MISO
-Text GLabel 7450 -2850 2    50   Input ~ 0
+Text GLabel 5950 -2850 2    50   Input ~ 0
 FPGA_MOSI
-Text Label 7650 -4350 2    50   ~ 0
-LED_ACT
 Wire Wire Line
-	7300 -4650 8000 -4650
+	5950 -2850 5800 -2850
 Wire Wire Line
-	7450 -2850 7300 -2850
-Wire Wire Line
-	7300 -3000 7450 -3000
-Wire Wire Line
-	7450 -3150 7300 -3150
-Wire Wire Line
-	7300 -3300 7450 -3300
-Wire Wire Line
-	7300 -4950 7450 -4950
-Wire Wire Line
-	7300 -5100 7450 -5100
-Text GLabel 7450 -4800 2    50   Input ~ 0
-VIO_ENA
-Text Notes 7900 -4750 0    50   ~ 0
-PB2 is also BOOT1, which should be low during startup
-Wire Wire Line
-	7400 -5650 7300 -5650
-Wire Wire Line
-	7300 -5800 7400 -5800
-Wire Wire Line
-	7300 -6250 7400 -6250
-Wire Wire Line
-	7300 -6400 7400 -6400
-Wire Wire Line
-	7300 -6550 7400 -6550
-Wire Wire Line
-	7300 -6700 7400 -6700
-Text GLabel 7400 -5950 2    50   Input ~ 0
-ADC7
-Wire Wire Line
-	7400 -5950 7300 -5950
-Wire Wire Line
-	7300 -6100 7400 -6100
-Text GLabel 7400 -6100 2    50   Input ~ 0
-VIO_DAC
-Text Label 8000 -4650 2    50   ~ 0
-CLKREF
-Wire Wire Line
-	7300 -4350 7650 -4350
-Wire Wire Line
-	7300 -4800 7450 -4800
-Text Label 4400 -3500 1    50   ~ 0
+	5800 -3000 5950 -3000
+Text Label 5900 -1850 1    50   ~ 0
 VDDA
-Text Label 7650 -1950 2    50   ~ 0
-VDDA
-Wire Wire Line
-	7650 -1950 7350 -1950
-Text Label 6100 -1500 0    50   ~ 0
-XTALOUT
-Text Label 6100 -1350 0    50   ~ 0
-XTALIN
-Wire Wire Line
-	6100 -1350 6450 -1350
-Wire Wire Line
-	6450 -1500 6100 -1500
-Text Label 3250 -2600 0    50   ~ 0
+Text Label 4750 -950 0    50   ~ 0
 NRST
-Text Label 6100 -1200 0    50   ~ 0
-NRST
+Text Label 6100 -2400 2    50   ~ 0
+BOOT0
 Wire Wire Line
-	6100 -1200 6450 -1200
+	6100 -2400 5800 -2400
+Text Label 7050 -1800 0    50   ~ 0
+BOOT0
 $Comp
-L power:GND #PWR?
-U 1 1 605BF48B
-P 7500 -900
-F 0 "#PWR?" H 7500 -1150 50  0001 C CNN
-F 1 "GND" H 7505 -1073 50  0000 C CNN
-F 2 "" H 7500 -900 50  0001 C CNN
-F 3 "" H 7500 -900 50  0001 C CNN
-	1    7500 -900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+3.3V #PWR?
-U 1 1 605BF9C6
-P 7500 -1800
-F 0 "#PWR?" H 7500 -1950 50  0001 C CNN
-F 1 "+3.3V" H 7515 -1627 50  0000 C CNN
-F 2 "" H 7500 -1800 50  0001 C CNN
-F 3 "" H 7500 -1800 50  0001 C CNN
-	1    7500 -1800
+L Device:R_Pack04 RN?
+U 1 1 60BB370C
+P 7200 -3650
+AR Path="/5C7B59B0/5C9E338E/60BB370C" Ref="RN?"  Part="1" 
+AR Path="/5C7B59B0/5C9E337E/60BB370C" Ref="RN?"  Part="1" 
+AR Path="/5FFD4B90/60BB370C" Ref="RN?"  Part="1" 
+AR Path="/5FFD4BA1/60BB370C" Ref="RN?"  Part="1" 
+AR Path="/60BB370C" Ref="RN13"  Part="1" 
+F 0 "RN13" V 7436 -3650 50  0000 C CNN
+F 1 "33R" V 7529 -3650 50  0000 C CNN
+F 2 "Glasgow:R_Array_Convex_4x0402" V 7475 -3650 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-YC_TC_group_51_RoHS_L_7-1313905.pdf" H 7200 -3650 50  0001 C CNN
+F 4 "res-0402cv-array-4-33r" H 7200 -3650 50  0001 C CNN "1b2-bom-key"
+F 5 "YC124-JR-1333RL" H 7200 -3650 50  0001 C CNN "MPN"
+F 6 "Yageo" H 7200 -3650 50  0001 C CNN "Mfg"
+	1    7200 -3650
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7350 -1800 7400 -1800
+	7000 -3550 6700 -3550
 Wire Wire Line
-	7400 -1800 7400 -1650
+	6700 -3550 6700 -3150
 Wire Wire Line
-	7400 -1500 7350 -1500
-Connection ~ 7400 -1800
+	5800 -3150 6700 -3150
 Wire Wire Line
-	7400 -1800 7500 -1800
+	7000 -3650 6600 -3650
 Wire Wire Line
-	7350 -1650 7400 -1650
-Connection ~ 7400 -1650
+	6600 -3650 6600 -3300
 Wire Wire Line
-	7400 -1650 7400 -1500
+	5800 -3300 6600 -3300
 Wire Wire Line
-	7350 -1350 7400 -1350
+	7000 -3750 6500 -3750
 Wire Wire Line
-	7400 -1350 7400 -1200
+	6500 -3750 6500 -3450
 Wire Wire Line
-	7400 -900 7350 -900
+	5800 -3450 6500 -3450
 Wire Wire Line
-	7350 -1050 7400 -1050
-Connection ~ 7400 -1050
+	7000 -3850 6400 -3850
 Wire Wire Line
-	7400 -1050 7400 -900
+	6400 -3850 6400 -3600
 Wire Wire Line
-	7350 -1200 7400 -1200
-Connection ~ 7400 -1200
-Wire Wire Line
-	7400 -1200 7400 -1050
-Wire Wire Line
-	7400 -900 7500 -900
-Connection ~ 7400 -900
-Wire Wire Line
-	7550 -2550 7300 -2550
-Wire Wire Line
-	7300 -2700 7550 -2700
-Text Label 4350 -4350 0    50   ~ 0
-BOOT0
-Text Label 7600 -2400 2    50   ~ 0
-BOOT0
-Wire Wire Line
-	7600 -2400 7300 -2400
+	5800 -3600 6400 -3600
+Text Label 7400 -3850 0    50   ~ 0
+TMS
+Text Label 7400 -3750 0    50   ~ 0
+TCK
+Text Label 7400 -3650 0    50   ~ 0
+TDI
+Text Label 7400 -3550 0    50   ~ 0
+TDO
+$Comp
+L Connector:TestPoint TP6
+U 1 1 60EC92E0
+P -4750 2850
+F 0 "TP6" V -4850 2900 50  0000 L CNN
+F 1 "SYNC" V -4646 2924 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H -4550 2850 50  0001 C CNN
+F 3 "~" H -4550 2850 50  0001 C CNN
+	1    -4750 2850
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
