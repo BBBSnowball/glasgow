@@ -857,28 +857,6 @@ Wire Wire Line
 Text Label 8850 2850 0    50   ~ 0
 CLKREF
 $Comp
-L Connector:TestPoint TP8
-U 1 1 5CA9B5FE
-P 1350 2350
-F 0 "TP8" V 1350 2600 50  0000 L CNN
-F 1 "5V" V 1454 2424 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1550 2350 50  0001 C CNN
-F 3 "~" H 1550 2350 50  0001 C CNN
-	1    1350 2350
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:TestPoint TP9
-U 1 1 5CA9CCBA
-P 1350 2450
-F 0 "TP9" V 1350 2700 50  0000 L CNN
-F 1 "3V3" V 1454 2524 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1550 2450 50  0001 C CNN
-F 3 "~" H 1550 2450 50  0001 C CNN
-	1    1350 2450
-	0    1    1    0   
-$EndComp
-$Comp
 L Connector:TestPoint TP10
 U 1 1 5CA9CD70
 P 1350 2650
@@ -930,42 +908,6 @@ F 3 "" H 1350 2850 50  0001 C CNN
 	1    1350 2850
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+5V #PWR0134
-U 1 1 5CB37530
-P 1350 2350
-F 0 "#PWR0134" H 1350 2200 50  0001 C CNN
-F 1 "+5V" H 1200 2400 50  0000 C CNN
-F 2 "" H 1350 2350 50  0001 C CNN
-F 3 "" H 1350 2350 50  0001 C CNN
-	1    1350 2350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR041
-U 1 1 5CB375E7
-P 1050 2350
-F 0 "#PWR041" H 1050 2200 50  0001 C CNN
-F 1 "+3.3V" H 1000 2400 50  0000 R CNN
-F 2 "" H 1050 2350 50  0001 C CNN
-F 3 "" H 1050 2350 50  0001 C CNN
-	1    1050 2350
-	1    0    0    -1  
-$EndComp
-Wire Notes Line
-	600  2200 1900 2200
-Wire Notes Line
-	1900 2200 1900 3100
-Wire Notes Line
-	1900 3100 600  3100
-Wire Notes Line
-	600  3100 600  2200
-Text Notes 600  3100 0    50   ~ 0
-Rear testpoints
-Wire Wire Line
-	1050 2350 1050 2450
-Wire Wire Line
-	1050 2450 1350 2450
 $Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 5D01628B
@@ -1024,32 +966,6 @@ F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1800 4350 50  0001 C CNN
 F 3 "~" H 1800 4350 50  0001 C CNN
 	1    1600 4350
 	-1   0    0    1   
-$EndComp
-$Comp
-L power:+1V2 #PWR0142
-U 1 1 5CC9337B
-P 950 2500
-F 0 "#PWR0142" H 950 2350 50  0001 C CNN
-F 1 "+1V2" H 1200 2550 50  0000 R CNN
-F 2 "" H 950 2500 50  0001 C CNN
-F 3 "" H 950 2500 50  0001 C CNN
-	1    950  2500
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	950  2550 1350 2550
-Wire Wire Line
-	950  2500 950  2550
-$Comp
-L Connector:TestPoint TP17
-U 1 1 5CC2ABF8
-P 1350 2550
-F 0 "TP17" V 1350 2800 50  0000 L CNN
-F 1 "1V2" V 1454 2624 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1550 2550 50  0001 C CNN
-F 3 "~" H 1550 2550 50  0001 C CNN
-	1    1350 2550
-	0    1    1    0   
 $EndComp
 $Comp
 L glasgow-rescue:TLV75533PDRVR-Glasgow-glasgow-rescue U8
@@ -1985,23 +1901,23 @@ Wire Wire Line
 Text Label 2500 -850 2    50   ~ 0
 USB_P
 Wire Wire Line
-	2150 -1300 2400 -1300
+	2150 -1300 2250 -1300
 $Comp
 L power:+5V #PWR0138
 U 1 1 6196A009
-P 2400 -1300
-F 0 "#PWR0138" H 2400 -1450 50  0001 C CNN
-F 1 "+5V" H 2250 -1250 50  0000 C CNN
-F 2 "" H 2400 -1300 50  0001 C CNN
-F 3 "" H 2400 -1300 50  0001 C CNN
-	1    2400 -1300
+P 2550 -1300
+F 0 "#PWR0138" H 2550 -1450 50  0001 C CNN
+F 1 "+5V" V 2550 -1100 50  0000 C CNN
+F 2 "" H 2550 -1300 50  0001 C CNN
+F 3 "" H 2550 -1300 50  0001 C CNN
+	1    2550 -1300
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R7
 U 1 1 619754B8
 P 2500 -1600
-F 0 "R7" V 2400 -1600 50  0000 C CNN
+F 0 "R7" V 2450 -1750 50  0000 C CNN
 F 1 "10k" V 2500 -1600 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 2430 -1600 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 2500 -1600 50  0001 C CNN
@@ -2755,4 +2671,18 @@ Wire Wire Line
 	-4600 2950 -5000 2950
 Wire Wire Line
 	-5000 2750 -4600 2750
+$Comp
+L Device:R R29
+U 1 1 6144C403
+P 2400 -1300
+F 0 "R29" V 2300 -1300 50  0000 C CNN
+F 1 "0" V 2400 -1300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 2330 -1300 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 2400 -1300 50  0001 C CNN
+F 4 "Yageo" H -2000 -6600 50  0001 C CNN "Mfg"
+F 5 "RC0402FR-13100KL" H -2000 -6600 50  0001 C CNN "MPN"
+F 6 "res-0402-100k" H 2400 -1300 50  0001 C CNN "1b2-bom-key"
+	1    2400 -1300
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
