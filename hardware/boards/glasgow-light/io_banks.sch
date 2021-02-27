@@ -292,19 +292,6 @@ Wire Wire Line
 Wire Wire Line
 	2650 4250 2550 4250
 $Comp
-L Connector_Generic:Conn_01x03 J10
-U 1 1 5C072C23
-P 3450 3550
-F 0 "J10" H 3550 3450 50  0000 L CNN
-F 1 "AUX" H 3550 3350 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3450 3550 50  0001 C CNN
-F 3 "~" H 3450 3550 50  0001 C CNN
-F 4 "conn-th-01in-3-1-hdr" H 3450 3550 50  0001 C CNN "1b2-bom-key"
-F 5 "DNP" H 3550 3550 50  0000 L CNN "DNP"
-	1    3450 3550
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5C0F528A
 P 3150 3200
@@ -316,22 +303,6 @@ F 2 "" H 3150 3200 50  0001 C CNN
 F 3 "" H 3150 3200 50  0001 C CNN
 	1    3150 3200
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J?
-U 1 1 5C961091
-P 4500 2500
-AR Path="/5C961091" Ref="J?"  Part="1" 
-AR Path="/5C7B59B0/5C961091" Ref="J4"  Part="1" 
-F 0 "J4" H 4500 2300 50  0000 C CNN
-F 1 "Conn_01x02" H 4580 2401 50  0001 L CNN
-F 2 "Glasgow:Molex_KK-254_1x02_P2.54mm_Horizontal" H 4500 2500 50  0001 C CNN
-F 3 "https://www.mouser.hk/datasheet/2/418/NG_CD_640455_Y3-1255934.pdf" H 4500 2500 50  0001 C CNN
-F 4 "Molex" H -6100 -350 50  0001 C CNN "Mfg"
-F 5 "22-05-3021" H -6100 -350 50  0001 C CNN "MPN"
-F 6 "conn-th-01in-2-1-hdr-ra" H 4500 2500 50  0001 C CNN "1b2-bom-key"
-	1    4500 2500
-	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR?
@@ -395,8 +366,6 @@ F 3 "" H 2650 2800 50  0001 C CNN
 	1    2650 2800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1800 2400 1800 3450
 $Comp
 L Device:R R?
 U 1 1 5CBF4EC8
@@ -434,9 +403,6 @@ F 6 "esd-diode-sod523-esd5z5_0t1g" H 3650 2550 50  0001 C CNN "1b2-bom-key"
 	0    1    1    0   
 $EndComp
 Connection ~ 3650 2400
-Wire Wire Line
-	4300 2500 4300 2700
-Connection ~ 4300 2700
 Wire Wire Line
 	3650 2400 4300 2400
 Wire Wire Line
@@ -515,16 +481,11 @@ F 7 "DNP" H 2850 3510 50  0000 L CNN "DNP"
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3250 3150 3150 3150
-Wire Wire Line
 	3150 3150 3150 3200
-Wire Wire Line
-	3250 3150 3250 3450
 Wire Wire Line
 	3150 3150 3000 3150
 Wire Wire Line
 	3000 3150 3000 3200
-Connection ~ 3150 3150
 Wire Wire Line
 	3000 3150 2700 3150
 Wire Wire Line
@@ -575,7 +536,7 @@ F 6 "res-0402-47r" H 2400 3550 50  0001 C CNN "1b2-bom-key"
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	1800 2400 3100 2400
+	3000 2400 3100 2400
 Wire Wire Line
 	2550 4700 2650 4700
 $Comp
@@ -712,4 +673,49 @@ Wire Wire Line
 	2500 5450 2650 5450
 Wire Wire Line
 	2650 5550 2500 5550
+Text HLabel 3000 2400 0    50   Input ~ 0
+~SYNC_INT
+$Comp
+L Connector:TestPoint TP?
+U 1 1 612A8BE6
+P 4300 2400
+AR Path="/612A8BE6" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/612A8BE6" Ref="TP6"  Part="1" 
+F 0 "TP6" V 4200 2450 50  0000 L CNN
+F 1 "SYNC" V 4404 2474 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4500 2400 50  0001 C CNN
+F 3 "~" H 4500 2400 50  0001 C CNN
+	1    4300 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 6134742E
+P 3250 3550
+AR Path="/6134742E" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/6134742E" Ref="TP7"  Part="1" 
+F 0 "TP7" V 3250 3750 50  0000 L CNN
+F 1 "SYNC" V 3354 3624 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3450 3550 50  0001 C CNN
+F 3 "~" H 3450 3550 50  0001 C CNN
+	1    3250 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 6134792A
+P 3250 3650
+AR Path="/6134792A" Ref="TP?"  Part="1" 
+AR Path="/5C7B59B0/6134792A" Ref="TP18"  Part="1" 
+F 0 "TP18" V 3250 3850 50  0000 L CNN
+F 1 "SYNC" V 3354 3724 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3450 3650 50  0001 C CNN
+F 3 "~" H 3450 3650 50  0001 C CNN
+	1    3250 3650
+	0    1    1    0   
+$EndComp
+Text HLabel 1800 3550 0    50   Input ~ 0
+AUX1
+Text HLabel 1800 3650 0    50   Input ~ 0
+AUX2
 $EndSCHEMATC

@@ -778,6 +778,9 @@ F20 "DA3" I L 9150 3300 50
 F21 "DA2" I L 9150 3200 50 
 F22 "DA1" I L 9150 3100 50 
 F23 "DA0" I L 9150 3000 50 
+F24 "~SYNC_INT" I R 9700 2400 50 
+F25 "AUX1" I R 9700 2500 50 
+F26 "AUX2" I R 9700 2600 50 
 $EndSheet
 Connection ~ 1350 3500
 Wire Wire Line
@@ -830,7 +833,7 @@ Connection ~ 1000 950
 Connection ~ 1000 1350
 Connection ~ 4000 950 
 Connection ~ 4000 1350
-Text Notes 9750 2700 0    50   ~ 0
+Text Notes 10150 2850 0    50   ~ 0
 Addr A Pull: 0100000
 $Comp
 L Device:Ferrite_Bead FB1
@@ -2209,8 +2212,8 @@ Wire Wire Line
 	-5000 3450 -4750 3450
 Text Label -2800 3050 2    50   ~ 0
 DA0
-Text Label -4750 2850 2    50   ~ 0
-~SYNC
+Text Label -4600 2850 2    50   ~ 0
+~SYNC_INT
 Text Label -2800 3250 2    50   ~ 0
 QA7
 Text Label -2800 3750 2    50   ~ 0
@@ -2306,7 +2309,7 @@ Wire Wire Line
 Wire Wire Line
 	-2750 3950 -2750 3750
 Wire Wire Line
-	-4750 2850 -5000 2850
+	-4600 2850 -5000 2850
 Text Label 9900 3000 2    50   ~ 0
 QA0
 Text Label 9900 3100 2    50   ~ 0
@@ -2648,17 +2651,6 @@ TDI
 Text Label 7400 -3550 0    50   ~ 0
 TDO
 $Comp
-L Connector:TestPoint TP6
-U 1 1 60EC92E0
-P -4750 2850
-F 0 "TP6" V -4850 2900 50  0000 L CNN
-F 1 "SYNC" V -4646 2924 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H -4550 2850 50  0001 C CNN
-F 3 "~" H -4550 2850 50  0001 C CNN
-	1    -4750 2850
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:C C15
 U 1 1 610429BC
 P 6600 -1200
@@ -2743,4 +2735,24 @@ F 6 "cap-cer-0603-4u7" H 1000 1150 50  0001 C CNN "1b2-bom-key"
 	1    1000 1150
 	1    0    0    -1  
 $EndComp
+Text Label 10100 2400 2    50   ~ 0
+~SYNC_INT
+Wire Wire Line
+	10100 2400 9700 2400
+Wire Wire Line
+	9700 2500 10100 2500
+Wire Wire Line
+	9700 2600 10100 2600
+Text Label 10100 2600 2    50   ~ 0
+AUX2
+Text Label 10100 2500 2    50   ~ 0
+AUX1
+Text Label -4600 2950 2    50   ~ 0
+AUX2
+Text Label -4600 2750 2    50   ~ 0
+AUX1
+Wire Wire Line
+	-4600 2950 -5000 2950
+Wire Wire Line
+	-5000 2750 -4600 2750
 $EndSCHEMATC
