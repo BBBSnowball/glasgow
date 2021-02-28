@@ -2685,4 +2685,31 @@ F 6 "res-0402-100k" H 2400 -1300 50  0001 C CNN "1b2-bom-key"
 	1    2400 -1300
 	0    1    1    0   
 $EndComp
+$Comp
+L Device:R R11
+U 1 1 61B60DD1
+P 5950 -400
+F 0 "R11" V 5850 -400 50  0000 C CNN
+F 1 "0" V 5950 -400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5880 -400 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 5950 -400 50  0001 C CNN
+F 4 "Yageo" H 1550 -5700 50  0001 C CNN "Mfg"
+F 5 "RC0402FR-13100KL" H 1550 -5700 50  0001 C CNN "MPN"
+F 6 "res-0402-100k" H 5950 -400 50  0001 C CNN "1b2-bom-key"
+	1    5950 -400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5800 -400 5800 -650
+$Comp
+L power:GND #PWR0115
+U 1 1 61B7F35F
+P 6100 -400
+F 0 "#PWR0115" H 6100 -650 50  0001 C CNN
+F 1 "GND" H 6105 -573 50  0000 C CNN
+F 2 "" H 6100 -400 50  0001 C CNN
+F 3 "" H 6100 -400 50  0001 C CNN
+	1    6100 -400
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
