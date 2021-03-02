@@ -1395,12 +1395,12 @@ CLKIF
 $Comp
 L power:+3.3V #PWR0103
 U 1 1 5FFD4B59
-P 8000 800
-F 0 "#PWR0103" H 8000 650 50  0001 C CNN
-F 1 "+3.3V" H 8015 973 50  0000 C CNN
-F 2 "" H 8000 800 50  0001 C CNN
-F 3 "" H 8000 800 50  0001 C CNN
-	1    8000 800 
+P 8000 650
+F 0 "#PWR0103" H 8000 500 50  0001 C CNN
+F 1 "+3.3V" H 8015 823 50  0000 C CNN
+F 2 "" H 8000 650 50  0001 C CNN
+F 3 "" H 8000 650 50  0001 C CNN
+	1    8000 650 
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -1497,8 +1497,6 @@ Wire Wire Line
 	5950 1300 5950 1350
 Wire Wire Line
 	5950 1350 6300 1350
-Wire Wire Line
-	8000 800  8000 950 
 $Comp
 L power:+1V2 #PWR0114
 U 1 1 5FFD4C73
@@ -2712,4 +2710,17 @@ F 3 "" H 6100 -400 50  0001 C CNN
 	1    6100 -400
 	0    -1   -1   0   
 $EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP1
+U 1 1 6042F790
+P 8000 800
+F 0 "JP1" V 8000 868 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 8045 868 50  0001 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 8000 800 50  0001 C CNN
+F 3 "~" H 8000 800 50  0001 C CNN
+	1    8000 800 
+	0    1    1    0   
+$EndComp
+Text Notes 8150 1400 0    50   ~ 0
+3V3 is usually ok\nfor VPP_2V5\nunless we want to\nprogram NVCM
 $EndSCHEMATC
